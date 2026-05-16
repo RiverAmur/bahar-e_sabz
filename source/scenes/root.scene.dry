@@ -289,19 +289,19 @@ Q.catholics_other = 12;
 
 
 // Current Reichstag composition
-// % of Reichstag in Jan 1928
+// % of Majles in Mehr 1388
 // source: wikipedia
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
-Q.nsdap_r = 3;
-Q.other_r = 9;
+Q.spd_r = 18;
+Q.kpd_r = 67;
+Q.z_r = 13;
+Q.ddp_r = 0;
+Q.dvp_r = 4;
+Q.dnvp_r = 0;
+Q.nsdap_r = 0;
+Q.other_r = 0;
 
 // diff from prev
 Q.old_spd_r = 26;

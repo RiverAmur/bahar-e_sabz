@@ -12,7 +12,7 @@ body {
   --tab-hover-color: #ececec;
   --card-border-color: #ccc; 
   --card-bg-color: #ddd; 
-  font-family: 'Iranian Sans', serif;
+  font-family: 'Iranian Sans', sans-serif;
   background-color: var(--bg-color);
   padding: 0;
   line-height: 155%;
@@ -228,7 +228,7 @@ blockquote + blockquote.attribution {
     margin-right: -0.6em;
 }
 .tab_button {
-    font-family: 'Iranian Sans', serif;
+    font-family: 'Iranian Sans', sans-serif;
     background-color: var(--tab-color);
     color: var(--text-color);
     /*float: left;*/

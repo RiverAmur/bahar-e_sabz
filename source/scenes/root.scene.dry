@@ -21,7 +21,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 2009;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -623,10 +623,9 @@ audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2009
 
-It is a bright time for the proletarian struggle. After a period of the greatest... In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a dark time for Iranian democracy. The hardline forces of fundamentalism attempted to rig the Presidential elections and erode the freedoms of the Iranian people.
 
-Now, the task of Socialism is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
-
+However, thanks to the iron mettle of the people, they failed; and now the task of Mir-Hossein Mousavi is to be the voice of the voiceless.
 

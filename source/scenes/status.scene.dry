@@ -18,22 +18,22 @@ if (Q.economic_growth) {
 
 [+ month : month +] [+ year +]
 
-Political Power: [+ resources +]
+Political Influence: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+Popular Support: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : Enthusiastic ?][? if spd_caretaker : caretaker government ?]
 [? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
 [? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
 
-Internal dissent: [+ dissent_percent : dissent +]
+Movement Unity: [+ dissent_percent : dissent +]
 
 = Government
 
 <span style="color: #256c05; font-weight: bold;">Supreme Leader</span>: [+ president +]
 
-President: [+ chancellor +] ([+ chancellor_party +])
+President: [+ chancellor +]
 
 Majles-e Shurâ-ye Eslâmi:
 
@@ -51,9 +51,9 @@ Majles-e Shurâ-ye Eslâmi:
 # 1928: 14, 1930: 7
 {!<span class="tooltip-text" title="Reserved Seats">Reserved Seats</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="Placeholder">PRF</span>!}: [+ nsdap_r +]%
+{!<span class="tooltip-text" title="Placeholder">Others</span>!}: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
-Others: [+ other_r +]%
+None: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 

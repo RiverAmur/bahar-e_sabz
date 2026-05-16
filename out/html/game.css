@@ -1,9 +1,9 @@
 body {
-  --bg-color: #f3f3e3;
+  --bg-color: #ccffdb;
   --border-color: #000;
   --content-bg-color: #f3f3f3;
-  --text-color: #431;
-  --link-color: #900;
+  --text-color: rgb(14, 31, 76);
+  --link-color: rgb(5, 115, 47);
   --link-hover-color: rgba(0, 0, 0, 0.05);
   --unavailable-bg-color: rgba(0, 0, 0, 0.1);
   --unavailable-color: #999;
@@ -12,7 +12,7 @@ body {
   --tab-hover-color: #ececec;
   --card-border-color: #ccc; 
   --card-bg-color: #ddd; 
-  font-family: 'Iranian Sans', sans-serif;
+  font-family: "Iranian Sans", sans-serif;
   background-color: var(--bg-color);
   padding: 0;
   line-height: 155%;
@@ -228,7 +228,7 @@ blockquote + blockquote.attribution {
     margin-right: -0.6em;
 }
 .tab_button {
-    font-family: 'Iranian Sans', sans-serif;
+    font-family: "Iranian Sans", sans-serif;
     background-color: var(--tab-color);
     color: var(--text-color);
     /*float: left;*/

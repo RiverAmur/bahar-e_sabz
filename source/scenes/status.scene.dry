@@ -31,27 +31,27 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-<span style="color: #8B0000; font-weight: bold;">Premier</span>: [+ president +]
+<span style="color: #256c05; font-weight: bold;">Supreme Leader</span>: [+ president +]
 
-Central Committee Chairman: [+ chancellor +] ([+ chancellor_party +])
+President: [+ chancellor +] ([+ chancellor_party +])
 
-Supreme People's Assembly:
+Majles-e Shurâ-ye Eslâmi:
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="French Socialist Party">FSP</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="United Front of Principlists">UFP (Principlist)</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="French Sorelian-Syndicalist Party">FSSP</span>!}: [+ z_r +]%
+{!<span class="tooltip-text" title="Principlists Pervasive Coalition">PPC (Principlist)</span>!}: [+ z_r +]%
 # 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Internationalist Revolutionary Party">IRP</span>!}: [+ kpd_r +]%
+{!<span class="tooltip-text" title="Reformist Coalition">RC (Reformist)</span>!}: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="Democracy Front">DF (Reformist)</span>!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
 # 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="United Reform Front">URF</span>!}: [+ dvp_r +]%
+{!<span class="tooltip-text" title="Independents">Independents</span>!}: [+ dvp_r +]%
 # 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="Minor special interest party">Restoration!</span>!}: [+ dnvp_r +]%
+{!<span class="tooltip-text" title="Reserved Seats">Reserved Seats</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
-{!<span class="tooltip-text" title="Popular Resistance Front">PRF</span>!}: [+ nsdap_r +]%
+{!<span class="tooltip-text" title="Placeholder">PRF</span>!}: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
@@ -65,7 +65,7 @@ Inflation: [+ inflation_2 +]%
 
 [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
 
-Economic growth: [+ economic_growth_2 +]%
+GDP Growth: [+ economic_growth_2 +]%
 
 
 

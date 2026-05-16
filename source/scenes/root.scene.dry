@@ -329,9 +329,9 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Lucien Durand (FSP)";
+Q.president = "Ayatollah Ali Khamenei";
 // starting chancellor: Wilhelm Marx
-Q.chancellor = "Alexandre Boutin (I)";
+Q.chancellor = "Mir-Hossein Mousavi";
 Q.chancellor_party = 'Z';
 Q.spd_in_government = 0;
 Q.z_in_government = 1;

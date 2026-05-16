@@ -53,9 +53,9 @@ is-deck: true
 - #party_affairs
 
 @govt
-title: Government Affairs
+title: Government
 view-if: time >= 6
-card-image: img/reichstag_2.jpg
+card-image: img/Government.jpg
 is-deck: true
 
 - #govt_affairs

@@ -1,21 +1,21 @@
 body {
   --bg-color: #ccffdb;
   --border-color: #000;
-  --content-bg-color: #f3f3f3;
+  --content-bg-color: #b2d874;
   --text-color: rgb(14, 31, 76);
   --link-color: rgb(5, 115, 47);
   --link-hover-color: rgba(0, 0, 0, 0.05);
   --unavailable-bg-color: rgba(0, 0, 0, 0.1);
   --unavailable-color: #999;
-  --tab-bg-color: #dedede;
-  --tab-color: #ddd;
-  --tab-hover-color: #ececec;
+  --tab-bg-color: #b3c83b;
+  --tab-color: #c8e6bf;
+  --tab-hover-color: #d8e7c0;
   --card-border-color: #ccc; 
   --card-bg-color: #ddd; 
   font-family: "Iranian Sans", sans-serif;
   background-color: var(--bg-color);
   padding: 0;
-  line-height: 155%;
+  line-height: 150%;
   overflow-y: scroll;
 }
 body.dark-mode {
@@ -52,7 +52,7 @@ header, #content, footer {
   background-color: var(--content-bg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 12px rgba(23, 40, 28, 0.2);
 }
 footer {
   margin-top: 1em;
@@ -63,7 +63,7 @@ footer a {
   padding-right: 1em;
 }
 header {
-  text-align: right
+  text-align: middle
 }
 #header-links {
   text-align: left;

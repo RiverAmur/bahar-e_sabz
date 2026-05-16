@@ -1,5 +1,5 @@
-title: A New Day in Germany
-subtitle: Has democracy finally triumphed?
+title: The Longest Night Ends
+subtitle: Finally, the masses will breathe free.
 tags: event
 priority: 3
 view-if: hindenburg_dead = 1 and president != "Hitler" and president != "Göring" and president != "Seldte"

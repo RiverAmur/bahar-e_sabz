@@ -295,8 +295,8 @@ Q.catholics_other = 12;
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.spd_r = 18;
-Q.kpd_r = 67;
-Q.z_r = 13;
+Q.kpd_r = 13;
+Q.z_r = 67;
 Q.ddp_r = 0;
 Q.dvp_r = 4;
 Q.dnvp_r = 0;

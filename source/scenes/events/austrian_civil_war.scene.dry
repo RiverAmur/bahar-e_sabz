@@ -4,7 +4,7 @@ subtitle: Named "Hope" - the satellite that will carry our ambition into space..
 view-if: year >= 2009 and month >= 1
 max-visits: 1
 on-arrival: austrian_civil_war_seen = 1
-face-image: img/schutzbund.png
+face-image: img/Omid.jpg
 tags: event
 
 = Omid Satellite Launched!

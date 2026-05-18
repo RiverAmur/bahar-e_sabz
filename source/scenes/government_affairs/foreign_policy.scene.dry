@@ -1,16 +1,16 @@
-title: Foreign Policy
+title: Religious Affairs
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: month_actions += 1; foreign_policy_timer += 8
 view-if: spd_in_government = 1 and foreign_minister_party = "SPD" and  foreign_policy_timer <= 0
-card-image: img/portraits/BreitscheidRudolf.jpg
+card-image: img/Religious_Affairs.jpg
 go-to: fp_menu
 #subtitle: International relations and dealing with Versailles.
 
-= Foreign Policy
+= Religious Affairs
 
-What should our foreign policy priority be?
+There are a number of religious matters we can attend to.
 
 @fp_menu
 

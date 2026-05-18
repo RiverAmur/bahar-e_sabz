@@ -1,16 +1,16 @@
 body {
-  --bg-color: #ccffdb;
+  --bg-color: #ccffdbda;
   --border-color: #000;
-  --content-bg-color: #e4f5c9;
+  --content-bg-color: #e4f5c9d2;
   --text-color: rgb(14, 31, 76);
   --link-color: rgb(5, 115, 47);
-  --link-hover-color: rgba(0, 0, 0, 0.05);
+  --link-hover-color: rgba(15, 36, 21, 0.05);
   --unavailable-bg-color: rgba(0, 0, 0, 0.1);
   --unavailable-color: #999;
-  --tab-bg-color: #deeb94;
-  --tab-color: #c8e6bf;
+  --tab-bg-color: #b4c16c;
+  --tab-color: #c8e6bfc5;
   --tab-hover-color: #d8e7c0;
-  --card-border-color: #ccc; 
+  --card-border-color: #6f8413; 
   --card-bg-color: #ddd; 
   font-family: "Iranian Sans", sans-serif;
   background-color: var(--bg-color);

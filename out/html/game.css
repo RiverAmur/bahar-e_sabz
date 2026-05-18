@@ -15,7 +15,7 @@ body {
   --card-border-color: #6f8413; 
   --card-bg-color: #ddd; 
   font-family: "Iranian Sans", sans-serif;
-  background-color: var(--bg-color);
+  background-image: var(--content-bg-img);
   padding: 0;
   line-height: 150%;
   overflow-y: scroll;
@@ -224,7 +224,6 @@ blockquote + blockquote.attribution {
 
 /* tabs */
 .tab_container {
-    background-image: var(--content-bg-img);
     background-color: var(--tab-bg-color);
     margin-top: -0.6em;
     margin-left: -0.6em;

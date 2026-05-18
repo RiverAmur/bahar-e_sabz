@@ -67,7 +67,7 @@ header {
   text-align: middle
 }
 #header-links {
-  text-align: left;
+  text-align: middle;
   float: left;
   display: inline-block;
   margin-bottom: 0.5em;

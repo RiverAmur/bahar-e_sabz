@@ -1,7 +1,8 @@
 body {
-  --bg-image: url(https://t4.ftcdn.net/jpg/03/07/90/19/360_F_307901946_oXxycrs1WOxR533v9cTbVV9jsCgXXIyC.jpg)
+  /*--bg-image: url(https://t4.ftcdn.net/jpg/03/07/90/19/360_F_307901946_oXxycrs1WOxR533v9cTbVV9jsCgXXIyC.jpg)*/
   --bg-color: #ccffdbda;
   --border-color: #000;
+  --content-bg-img: url(https://t4.ftcdn.net/jpg/03/07/90/19/360_F_307901946_oXxycrs1WOxR533v9cTbVV9jsCgXXIyC.jpg)
   --content-bg-color: #e4f5c9e1;
   --text-color: rgb(14, 31, 76);
   --link-color: rgb(5, 115, 47);
@@ -223,6 +224,7 @@ blockquote + blockquote.attribution {
 
 /* tabs */
 .tab_container {
+    background-image: var(--content-bg-img);
     background-color: var(--tab-bg-color);
     margin-top: -0.6em;
     margin-left: -0.6em;

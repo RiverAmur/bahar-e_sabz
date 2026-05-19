@@ -2,7 +2,7 @@ body {
   /*--bg-image: url(https://t4.ftcdn.net/jpg/03/07/90/19/360_F_307901946_oXxycrs1WOxR533v9cTbVV9jsCgXXIyC.jpg)*/
   --bg-color: #ccffdbda;
   --border-color: #000;
-  --content-bg-color: #54810be1;
+  --content-bg-color: #b6da7ee1;
   --text-color: rgb(14, 31, 76);
   --link-color: rgb(5, 115, 47);
   --link-hover-color: rgba(15, 36, 21, 0.05);
@@ -49,13 +49,13 @@ header, #content, footer {
   overflow: auto;
 }
 #content {
-  background-color: rgba(210, 225, 235, 0.9);
+  background-color: rgba(175, 205, 230, 0.9);
   background-image: linear-gradient(
     rgba(0, 0, 0, 0) 50%, 
-    rgba(0, 0, 0, 0.08) 50%
+    rgba(0, 0, 0, 0.1) 50%
   );
   background-size: 3px 3px; 
-  border: 2px solid;
+  border: 2px solid #7595b5;
   box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.35);
   /*background-size: 100% 20px;*/
   position: relative;

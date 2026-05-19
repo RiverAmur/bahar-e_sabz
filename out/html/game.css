@@ -62,8 +62,8 @@ header, #content, footer {
   /*background-image: url(img/Computer.png);*/
   /*opacity: 90%;*/
   background-blend-mode: screen;
-  background-repeat: no-repeat;
-  background-position: center;
+  /*background-repeat: no-repeat;
+  background-position: center;*/
   background-color: var(--content-bg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;

@@ -50,7 +50,7 @@ header, #content, footer {
 }
 #content {
   position: relative;
-  background-image: url(img/Computer.jpg);
+  background-image: url(img/Computer.png);
   /*background-blend-mode: lighten;*/
   background-size: cover;
   background-repeat: no-repeat;

@@ -69,7 +69,7 @@ header, #content, footer {
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;
   /*box-shadow: 2px 2px 12px rgba(23, 40, 28, 0.2);*/
-  animation: crt-flicker 0.2s infinite;
+  animation: crt-flicker 0.15s infinite;
   color: #1a2530;
   text-shadow: none; 
   font-family: 'Lucida Console', Monaco, monospace; 
@@ -155,9 +155,20 @@ p.game-over {
   color: #999;
 }
 ul.choices {
-  border: 2px solid #876;
-  padding: 0;
-  margin: 0.25em 0 0 0;
+  display: block;
+  width: 100%;
+  background: transparent; /* Invisible by default */
+  border: 1px dashed transparent; 
+  color: #051525;
+  font-family: 'Lucida Console', Monaco, monospace;
+  font-size: 11pt;
+  text-align: left;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  /*Original Code*/
+  /*border: 2px solid #876;
+  /*padding: 0;*/
+  /*margin: 0.25em 0 0 0;*/
   list-style-type: none;
   border-radius: 4px;
   clear: left;

@@ -156,9 +156,8 @@ p.game-over {
 }
 ul.choices {
   display: block;
-  background-color: #d4d0c8;
-  border: 1px dashed #001f5b; 
-  color: #051525;
+  background-color: #c5d8e8;
+  border: 1px dashed #002244; 
   padding: 0;
   margin-bottom: 4px;
   margin-top: 4px;

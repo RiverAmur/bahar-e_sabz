@@ -72,7 +72,7 @@ header, #content, footer {
   animation: crt-flicker 0.15s infinite;
   color: #1a2530;
   text-shadow: none; 
-  font-family: 'Lucida Console', Monaco, monospace; 
+  font-family: "Tahoma", Monaco, monospace; 
   font-weight: normal;
 }
 @keyframes crt-flicker {

@@ -54,6 +54,7 @@ header, #content, footer {
   /*background-blend-mode: lighten;*/
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: var(--content-bg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;

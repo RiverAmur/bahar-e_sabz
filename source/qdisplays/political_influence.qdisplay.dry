@@ -1,0 +1,12 @@
+
+(..0) <span style="color: #a33c22; font-weight: bold;">Non-existent</span>
+(1..1) <span style="color: #b06232; font-weight: bold;">Low</span>
+(2..2) <span style="color: #eaed31; font-weight: bold;">Mild</span>
+(3..3) <span style="color: #a8be39; font-weight: bold;">Minor</span>
+(4..4) <span style="color: #afe67c; font-weight: bold;">Moderate</span>
+(5..5) <span style="color: #69c93d; font-weight: bold;">Notable</span>
+(6..6) <span style="color: #64cb35; font-weight: bold;">Burgeoning</span>
+(7..7) <span style="color: #51be1e; font-weight: bold;">Major</span>
+(8..8) <span style="color: #47a41c; font-weight: bold;">Considerable</span>
+(9..9) <span style="color: #30a419; font-weight: bold;">Widespread</span>
+(10..) <span style="color: #1b892f; font-weight: bold;">Extensive</span>

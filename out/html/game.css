@@ -2,7 +2,6 @@ body {
   /*--bg-image: url(https://t4.ftcdn.net/jpg/03/07/90/19/360_F_307901946_oXxycrs1WOxR533v9cTbVV9jsCgXXIyC.jpg)*/
   --bg-color: #ccffdbda;
   --border-color: #000;
-  --content-bg-img: url(https://t4.ftcdn.net/jpg/03/07/90/19/360_F_307901946_oXxycrs1WOxR533v9cTbVV9jsCgXXIyC.jpg)
   --content-bg-color: #e4f5c9e1;
   --text-color: rgb(14, 31, 76);
   --link-color: rgb(5, 115, 47);
@@ -15,7 +14,7 @@ body {
   --card-border-color: #6f8413; 
   --card-bg-color: #ddd; 
   font-family: "Iranian Sans", sans-serif;
-  background-image: var(--content-bg-img);
+  background-color: var(--bg-color);
   padding: 0;
   line-height: 150%;
   overflow-y: scroll;
@@ -51,6 +50,7 @@ header, #content, footer {
 }
 #content {
   position: relative;
+  background-image: url(img/Computer.jpg)
   background-color: var(--content-bg-color);
   font-size: 1.1em;
   padding: 1em 1.5em 1.5em 1.5em;

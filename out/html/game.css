@@ -63,7 +63,7 @@ header, #content, footer {
     rgba(0, 0, 0, 0.5) 19px,
     rgba(0, 0, 0, 0.5) 20px
   );
-  background-size: 100% 20px;
+  /*background-size: 100% 20px;*/
   position: relative;
   border-radius: 15px;
   /*background-image: url(img/Computer.png);*/

@@ -51,7 +51,7 @@ header, #content, footer {
 #content {
   position: relative;
   background-image: url(img/Computer.jpg);
-  background-blend-mode: lighten;
+  /*background-blend-mode: lighten;*/
   background-repeat: no-repeat;
   background-color: var(--content-bg-color);
   font-size: 1.1em;

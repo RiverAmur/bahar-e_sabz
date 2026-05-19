@@ -156,14 +156,12 @@ p.game-over {
 }
 ul.choices {
   display: block;
-  background-color: #d4d0c8
-  border: 1px dashed transparent; 
+  background-color: #d4d0c8;
+  border: 1px dashed #001f5b; 
   color: #051525;
-  font-family: 'Lucida Console', Monaco, monospace;
-  font-size: 11pt;
-  text-align: left;
   padding: 0;
   margin-bottom: 4px;
+  margin-top: 4px;
   /*Original Code*/
   /*border: 2px solid #876;
   /*padding: 0;*/

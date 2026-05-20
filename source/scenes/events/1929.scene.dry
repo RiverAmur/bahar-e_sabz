@@ -2,7 +2,7 @@ title: Mousavi Sworn In
 subtitle: Ahmadinejad reluctantly hands over the reins of power.
 on-arrival: chancellor = "Mir-Hossein Mousavi"
 
-
+= Mousavi Sworn In
 
 tags: event
 view-if: year = 2009 and month = 9

@@ -4,6 +4,7 @@ subtitle: The meeting offers a crucial chance to win the Leader's backing...
 view-if: year = 2009 and month = 1
 max-visits: 1
 on-arrival: austrian_civil_war_seen = 1
+face-image: img/schutzbund.png
 tags: event
 
 = Mousavi Meets with Khamenei!

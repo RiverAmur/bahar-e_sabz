@@ -1,0 +1,6 @@
+
+(..0) <span style="color: #66cae9; font-weight: bold;">Budding</span>
+(1..4) <span style="color: #59bedd; font-weight: bold;">Expanding</span>
+(4..8) <span style="color: #3fa8c8; font-weight: bold;">Significant</span>
+(8..12) <span style="color: #3193b1; font-weight: bold;">Monumental</span>
+(12..) <span style="color: #317abf; font-weight: bold;">World-Class</span>

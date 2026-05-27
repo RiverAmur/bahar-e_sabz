@@ -1,11 +1,11 @@
-title: Reformist leaders resign
+title: Pragmatists Leave the Movement!
 new-page: true 
-subtitle: Reformist disagreements with our policies have grown too severe.
+subtitle: The Green Movement has grown too radical for their liking.
 tags: event
 view-if: reformist_dissent >= 60
 on-arrival: reformist_strength *= 0.3; workers_spd -= 10; workers_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if severing_advisor == 1; braun_advisor = 0; severing_advisor = 0; rb_strength -= 250; reformists_resign = 1
 max-visits: 1
 
-= Reformist leaders resign
+= Pragmatists Leave the Movement!
 
-Our policy choices have greatly offended the reformist faction. Many of our most experienced leaders have resigned.
+The most well-connected, knowledgeable and politically connected part of the Green Movement, its pragmatic and moderate politicians and pro-reform public figures, have officially left the Movement, condemning it as an aberration of their ideals and far too radical in its pursuit of reform to the point of becoming counter-revolutionary.

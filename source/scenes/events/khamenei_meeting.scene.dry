@@ -1,0 +1,23 @@
+title: Mousavi Secures Meeting with Khamenei!
+new-page: true
+subtitle: The meeting offers a crucial chance to win the Leader's backing...
+view-if: year = 2009 and month = 1
+max-visits: 1
+on-arrival: austrian_civil_war_seen = 1
+face-image: img/schutzbund.png
+tags: event
+
+= Mousavi Meets with Khamenei!
+
+The self-proclaimed true President-elect and face of the Green Movement has secured a private meeting with the Supreme Leader - despite efforts from the IRGC to stop him - in which he has reaffirmed loyalty to the Islamic Republic and attempted to secure the Leader's backing with a promise to rein in the protests and govern true to Khomeinist principles. 
+
+Fighting against the deep influence of hardliners on the Supreme Leader, Mousavi is hoping to convince Ayatollah Khamenei to withdraw support from the disasterous Ahmadinejad and place confidence in him instead.
+
+- @uncertain_outcome
+
+@uncertain_outcome
+title: Khamenei appears reluctant...
+on-arrival: austria_defeat = 1
+
+The Supreme Leader is not fully convinced, however, he does not completely rebuff Mousavi either. 
+

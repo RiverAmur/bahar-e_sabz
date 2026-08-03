@@ -809,7 +809,7 @@ table {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
 }
 
-/* --- Restore the master layout container to normal --- */
+/* --- Safely Reset Master Panel Layout --- */
 #mid_panel {
     background: none !important;
     background-color: transparent !important;
@@ -818,27 +818,21 @@ table {
     padding: 0 !important;
 }
 
-/* --- Apply the Sleek Retro Monitor Chassis STRICTLY to the Screen --- */
+/* --- Forcing a Retro Bezel Directly onto the Screen Element --- */
 #display {
-    background-color: #cbd5e1 !important; /* Soft, realistic gray plastic framing edge */
+    /* 1. Generates a sleek, solid outer hardware frame edge */
+    outline: 4px solid #cbd5e1 !important; 
     
-    /* 1. Thin, crisp 4px physical hardware frame width */
-    border: 4px solid #cbd5e1 !important; 
+    /* 2. Shifts the outline away slightly to create a crisp 1px gap */
+    outline-offset: 1px !important;
     
-    /* 2. Delicate 3D low-contrast lighting contours */
-    border-top-color: #f1f5f9 !important;   /* Subtle light catch on the top rim */
-    border-left-color: #e2e8f0 !important;
-    border-right-color: #94a3b8 !important;  /* Soft, realistic shadow details */
-    border-bottom-color: #94a3b8 !important;
+    /* 3. Soft hardware cornering profile */
+    border-radius: 12px !important;
     
-    /* 3. Old vacuum-tube curved corner profile */
-    border-radius: 12px !important; 
-    
-    /* 4. Lightweight outer depth shadow to lift it off the map background */
+    /* 4. Drops depth shadows directly behind the element onto your map backdrop */
     box-shadow: 
-        inset 0 0 4px rgba(0, 0, 0, 0.4), /* Sharp internal seam where glass meets plastic */
-        4px 6px 12px rgba(0, 0, 0, 0.25) !important; /* Casts softly onto the map backdrop */
+        inset 0 0 6px rgba(0, 0, 0, 0.45), /* Sharp dark seam where the glass screen ends */
+        4px 6px 14px rgba(0, 0, 0, 0.25) !important; /* Soft depth casting shadow */
         
-    padding: 4px !important; /* Tiny, clean frame cushion gap */
     box-sizing: border-box !important;
 }

@@ -809,30 +809,40 @@ table {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
 }
 
-/* --- Safely Reset Master Panel Layout --- */
-#mid_panel {
-    background: none !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+/* --- The Pure Screen Element Overlay Matrix --- */
+#display {
+    position: relative !important; /* Vital constraint: allows our overlay to anchor safely */
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
 }
 
-/* --- Forcing a Retro Bezel Directly onto the Screen Element --- */
-#display {
-    /* 1. Generates a sleek, solid outer hardware frame edge */
-    outline: 4px solid #cbd5e1 !important; 
+/* --- This acts as a physical plastic ring layered on top of the blue graphic --- */
+#display::after {
+    content: "" !important;
+    position: absolute !important;
+    top: -4px !important;
+    left: -4px !important;
+    right: -4px !important;
+    bottom: -4px !important;
     
-    /* 2. Shifts the outline away slightly to create a crisp 1px gap */
-    outline-offset: 1px !important;
+    /* 1. Thin, crisp physical light-gray retro plastic border housing */
+    border: 4px solid #cbd5e1 !important; 
     
-    /* 3. Soft hardware cornering profile */
-    border-radius: 12px !important;
+    /* 2. Low-contrast hardware lighting highlights */
+    border-top-color: #f1f5f9 !important;   /* Light source hitting the top edge */
+    border-left-color: #e2e8f0 !important;
+    border-right-color: #94a3b8 !important;  /* Soft, realistic shadow drop lines */
+    border-bottom-color: #94a3b8 !important;
     
-    /* 4. Drops depth shadows directly behind the element onto your map backdrop */
+    /* 3. Old vacuum tube glass curved corner profile matches display box */
+    border-radius: 14px !important;
+    
+    /* 4. Layering parameters ensure the bezel covers the blue graphic background */
+    z-index: 9999 !important; 
+    pointer-events: none !important; /* Keeps choices and links underneath fully clickable */
+    
+    /* 5. Depth shadows to blend cleanly over the map asset backdrop */
     box-shadow: 
-        inset 0 0 6px rgba(0, 0, 0, 0.45), /* Sharp dark seam where the glass screen ends */
-        4px 6px 14px rgba(0, 0, 0, 0.25) !important; /* Soft depth casting shadow */
-        
-    box-sizing: border-box !important;
+        inset 0 0 4px rgba(0, 0, 0, 0.45), /* Dark physical screen transition seam */
+        4px 6px 14px rgba(0, 0, 0, 0.25) !important; /* Outer shadow cast onto background map */
 }

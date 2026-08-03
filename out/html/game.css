@@ -785,3 +785,26 @@ table {
     50% { opacity: 1; }
     100% { opacity: 0.993; }
 }
+
+/* --- Fixes the outer green background bleeding --- */
+#stats_sidebar {
+    background: none !important; /* Strips out the native game green color block */
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Optional: Add a clean dark drop shadow to the window frame --- */
+.retro-window-box {
+    background-color: #d8e2dc !important; 
+    border: 2px solid #5a6b7c;
+    padding: 4px !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 100%;
+    
+    /* Adds depth so the vintage terminal window pops out over the page */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
+}

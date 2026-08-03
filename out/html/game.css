@@ -809,27 +809,36 @@ table {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
 }
 
-/* --- Refined Sleek Retro Monitor Chassis --- */
+/* --- Restore the master layout container to normal --- */
 #mid_panel {
-    background-color: #e2e8f0 !important; /* Clean, retro light-gray/beige plastic */
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* --- Apply the Sleek Retro Monitor Chassis STRICTLY to the Screen --- */
+#display {
+    background-color: #cbd5e1 !important; /* Soft, realistic gray plastic framing edge */
     
-    /* 1. Drastically sliced the thickness in half */
-    border: 5px solid #cbd5e1 !important; 
+    /* 1. Thin, crisp 4px physical hardware frame width */
+    border: 4px solid #cbd5e1 !important; 
     
-    /* 2. Soft, low-contrast 3D lighting highlights */
-    border-top-color: #f1f5f9 !important;   /* Subtle light reflection on the top rim */
+    /* 2. Delicate 3D low-contrast lighting contours */
+    border-top-color: #f1f5f9 !important;   /* Subtle light catch on the top rim */
     border-left-color: #e2e8f0 !important;
     border-right-color: #94a3b8 !important;  /* Soft, realistic shadow details */
     border-bottom-color: #94a3b8 !important;
     
-    /* 3. Gentle hardware curve cornering */
+    /* 3. Old vacuum-tube curved corner profile */
     border-radius: 12px !important; 
     
-    /* 4. Lightweight outer drop shadow over the map backdrop */
+    /* 4. Lightweight outer depth shadow to lift it off the map background */
     box-shadow: 
-        inset 0 0 4px rgba(0, 0, 0, 0.4), /* Subtle crisp edge line around the glass screen */
-        4px 6px 12px rgba(0, 0, 0, 0.25) !important; /* Soft, clean depth shadow */
+        inset 0 0 4px rgba(0, 0, 0, 0.4), /* Sharp internal seam where glass meets plastic */
+        4px 6px 12px rgba(0, 0, 0, 0.25) !important; /* Casts softly onto the map backdrop */
         
-    padding: 3px !important; /* Small framing gap */
+    padding: 4px !important; /* Tiny, clean frame cushion gap */
     box-sizing: border-box !important;
 }

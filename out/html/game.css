@@ -642,10 +642,11 @@ table {
 .retro-window {
     background-color: #d8e2dc !important; /* Cool, industrial metallic frame */
     border: 2px solid #5a6b7c;
-    padding: 3px !important;
-    box-sizing: border-box;
+    padding: 4px !important;
+    box-sizing: border-box !important;
     display: flex;
     flex-direction: column;
+    width: 100% !important; /* Keeps container strictly bound to sidebar limits */
 }
 
 /* --- Window Title Bar --- */
@@ -659,10 +660,11 @@ table {
     font-weight: bold;
     font-size: 13px;
     font-family: "Courier New", monospace;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    box-sizing: border-box !important;
 }
 
-/* --- Fixed Window Control Buttons --- */
+/* --- Perfect, Vector-Centered Window Controls --- */
 .window-controls {
     display: flex;
     align-items: center;
@@ -672,78 +674,108 @@ table {
 .window-controls .win-btn {
     background: #cbd5e1;
     border: 1px solid #64748b;
-    font-family: "Courier New", monospace;
-    font-size: 11px;
-    font-weight: bold;
     width: 16px;
     height: 16px;
     padding: 0;
     margin: 0;
     cursor: pointer;
-    color: #0f172a;
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
+    box-sizing: border-box !important;
+    position: relative;
 }
 
-/* Specific fix for the minimize symbol centering */
-.window-controls .win-btn:first-child {
-    padding-bottom: 2px; /* Centers the underscore character visually */
+/* Minimize Vector Icon (Precise 8px line at bottom) */
+.window-controls .win-btn:nth-child(1)::before {
+    content: "";
+    width: 8px;
+    height: 2px;
+    background-color: #0f172a;
+    position: absolute;
+    bottom: 3px;
 }
 
-/* --- Perfect Tab Alignment Row --- */
+/* Maximize Vector Icon (Precise square outline) */
+.window-controls .win-btn:nth-child(2)::before {
+    content: "";
+    width: 8px;
+    height: 7px;
+    border: 2px solid #0f172a;
+    box-sizing: border-box;
+}
+
+/* Close Vector Icon (Perfect geometric X) */
+.window-controls .win-btn:nth-child(3)::before,
+.window-controls .win-btn:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: #0f172a;
+}
+.window-controls .win-btn:nth-child(3)::before { transform: rotate(45deg); }
+.window-controls .win-btn:nth-child(3)::after { transform: rotate(-45deg); }
+
+/* --- Perfect Width Grid-Aligned Tabs --- */
 .tab_container {
     display: flex;
-    flex-wrap: nowrap; /* Forces all buttons onto exactly one line */
-    width: 100%;
-    margin-bottom: 0px;
+    flex-wrap: nowrap !important; /* Prevents wrapping entirely */
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
     z-index: 2;
 }
 
-/* Tab Button Configuration */
+/* Tab Button Configuration with Aggressive Box Sizing overrides */
 .tab_button {
-    flex: 1; /* Automatically splits the exact box width evenly by 4 */
+    flex: 1 1 0% !important; /* Forces mathematically perfect 25% splits */
     background-color: #cbd5e1;
-    border: 1px solid #64748b;
-    border-bottom: none; /* Merges cleanly downward into content box */
-    padding: 6px 2px;
+    border: 1px solid #64748b !important;
+    border-bottom: none !important; /* Merges cleanly downward into content box */
+    padding: 6px 2px !important;
+    margin: 0 !important; /* Completely eliminates parent element spacer drift */
     font-size: 12px;
     font-family: "Courier New", monospace;
     cursor: pointer;
     text-align: center;
     color: #334155;
-    white-space: nowrap; /* Blocks layout text-wrapping glitches */
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
 }
 
-/* Active Highlight Tab */
+/* Active Highlight Tab Alignment */
 .tab_button.active {
-    background-color: #f0fdfa; /* Tinted icy base shade matching screen */
+    background-color: #f4f9f9 !important; /* Perfectly matches screen hex */
     font-weight: bold;
     color: #113f8c;
-    border-bottom: 1px solid #f0fdfa; /* Erases bottom seam */
+    border-bottom: 1px solid #f4f9f9 !important; /* Melts away boundary line */
     position: relative;
-    top: 1px;
+    top: 1px; /* Overlaps content boundary for folder tab effect */
     z-index: 3;
 }
 
 /* --- The TCR Icy White Terminal Screen Area --- */
 #qualities {
     background-color: #f4f9f9 !important; /* Premium, clean icy white */
-    border: 1px solid #64748b;
-    padding: 16px;
+    border: 1px solid #64748b !important;
+    padding: 16px !important;
+    margin: 0 !important;
     min-height: 400px;
     color: #0f172a;
     font-family: "Courier New", monospace;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box !important; /* Crucial: includes padding inside width math */
+    width: 100% !important;
 
     /* Vintage CRT Screen Scan Line Simulation Overlay */
     background-image: linear-gradient(
         rgba(18, 24, 38, 0.03) 50%, 
         transparent 50%
     );
-    background-size: 100% 4px; /* Renders thin horizontal micro-raster lines */
+    background-size: 100% 4px;
 
     /* Activates the retro terminal hardware glow and flicker */
     animation: crt-flicker 0.15s infinite;

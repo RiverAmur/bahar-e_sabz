@@ -295,37 +295,43 @@
     </div>
 
     <div id='page'>
-       <div id="mid_panel" class="retro-window">
-        <!-- New Title Bar Component -->
-        <div class="window-title-bar">
-            <span class="window-title-text">Social Democracy: An Alternate History</span>
-            <div class="window-controls">
-                <button class="win-btn">_</button>
-                <button class="win-btn">☐</button>
-                <button class="win-btn">X</button>
-            </div>
-        </div>
-            <header>
-                <h1 id="game-title">Social Democracy: An Alternate History</h1>
-                <h2 id="game-author">Autumn Chen</h2>
+    <div id="mid_panel">
+        <header>
+            <h1 id="game-title">Social Democracy: An Alternate History</h1>
+            <h2 id="game-author">Autumn Chen</h2>
 
-                <div id="header-links">
-                    <a id="stats-link" onclick="window.showStats();" href="#">Library</a>
-                    <a onclick="dendryUI.showSaveSlots();" href="#">Save/Load</a>
-                    <a onclick="window.showOptions();" href="#">Options</a>
-                </div>
-            </header>
-            <div id="tools_wrapper">
-                <div id='stats_sidebar' class='tools left'>
-                    <div class="tab_container">
-                        <button class="tab_button active" id="main_tab" onclick="window.changeTab('status', 'main_tab');">Main</button>
-                        <button class="tab_button" id="politics_tab" onclick="window.changeTab('status.politics', 'politics_tab');">Politics</button>
-                        <button class="tab_button" id="paramilitary_tab" onclick="window.changeTab('status.paramilitaries', 'paramilitary_tab');">Defense</button>
-                        <button class="tab_button" id="economy_tab" onclick="window.changeTab('status.economy', 'economy_tab');">Economy</button>
+            <div id="header-links">
+                <a id="stats-link" onclick="window.showStats();" href="#">Library</a>
+                <a onclick="dendryUI.showSaveSlots();" href="#">Save/Load</a>
+                <a onclick="window.showOptions();" href="#">Options</a>
+            </div>
+        </header>
+
+        <div id="tools_wrapper">
+            <!-- 1. LEFT SIDEBAR (The Retro Window Box) -->
+            <div id='stats_sidebar' class='tools left retro-window'>
+                <!-- Window Title Bar -->
+                <div class="window-title-bar">
+                    <span class="window-title-text">Status</span>
+                    <div class="window-controls">
+                        <button class="win-btn">_</button>
+                        <button class="win-btn">☐</button>
+                        <button class="win-btn">X</button>
                     </div>
-                    <div id="qualities">
-                    </div>
                 </div>
+
+                <!-- Tabs Row -->
+                <div class="tab_container">
+                    <button class="tab_button active" id="main_tab" onclick="window.changeTab('status', 'main_tab');">Main</button>
+                    <button class="tab_button" id="politics_tab" onclick="window.changeTab('status.politics', 'politics_tab');">Politics</button>
+                    <button class="tab_button" id="paramilitary_tab" onclick="window.changeTab('status.paramilitaries', 'paramilitary_tab');">Defense</button>
+                    <button class="tab_button" id="economy_tab" onclick="window.changeTab('status.economy', 'economy_tab');">Economy</button>
+                </div>
+
+                <!-- Inner Content Area -->
+                <div id="qualities">
+                </div>
+            </div>
                 <div id='stats_sidebar_right' class='tools right'>
                     <div class="tab_container">
                         <button class="tab_button active" id="development_tab" onclick="window.changeTab('status_right', 'development_tab', true);">Development</button>

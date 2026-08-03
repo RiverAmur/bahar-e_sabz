@@ -809,26 +809,27 @@ table {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
 }
 
+/* --- Refined Sleek Retro Monitor Chassis --- */
 #mid_panel {
-    background-color: #2c3540 !important; /* Matte charcoal vintage plastic body */
+    background-color: #e2e8f0 !important; /* Clean, retro light-gray/beige plastic */
     
-    /* 1. Heavy physical molded frame width */
-    border: 14px solid #1a222d !important; 
+    /* 1. Drastically sliced the thickness in half */
+    border: 5px solid #cbd5e1 !important; 
     
-    /* 2. Simulated 3D studio light angling highlights */
-    border-top-color: #3d4956 !important;   /* Light source hitting the top lip */
-    border-left-color: #2c3540 !important;
-    border-right-color: #0b0f14 !important;  /* Shadows falling on bottom/right */
-    border-bottom-color: #0b0f14 !important;
+    /* 2. Soft, low-contrast 3D lighting highlights */
+    border-top-color: #f1f5f9 !important;   /* Subtle light reflection on the top rim */
+    border-left-color: #e2e8f0 !important;
+    border-right-color: #94a3b8 !important;  /* Soft, realistic shadow details */
+    border-bottom-color: #94a3b8 !important;
     
-    /* 3. Old vacuum tube glass corner curves */
-    border-radius: 20px !important; 
+    /* 3. Gentle hardware curve cornering */
+    border-radius: 12px !important; 
     
-    /* 4. Heavy desk depth drop-shadows over the map backdrop */
+    /* 4. Lightweight outer drop shadow over the map backdrop */
     box-shadow: 
-        inset 0 0 10px rgba(0, 0, 0, 0.7), /* Sharp dark slot shadow around screen edge */
-        6px 10px 20px rgba(0, 0, 0, 0.5) !important; /* Casts onto background graphics */
+        inset 0 0 4px rgba(0, 0, 0, 0.4), /* Subtle crisp edge line around the glass screen */
+        4px 6px 12px rgba(0, 0, 0, 0.25) !important; /* Soft, clean depth shadow */
         
-    padding: 6px !important; /* Creates a clean, small plastic alignment gap */
+    padding: 3px !important; /* Small framing gap */
     box-sizing: border-box !important;
 }

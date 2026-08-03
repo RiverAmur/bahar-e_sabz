@@ -809,40 +809,21 @@ table {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
 }
 
-/* --- The Pure Screen Element Overlay Matrix --- */
-#display {
-    position: relative !important; /* Vital constraint: allows our overlay to anchor safely */
+/* --- Forces the Retro Bezel Directly around the Main Game Screen --- */
+#content {
+    /* 1. Generates a crisp, thin 4px solid light-gray retro frame edge */
+    outline: 4px solid #cbd5e1 !important; 
+    
+    /* 2. Displaces the frame outward by 1px to create a tiny physical separation line */
+    outline-offset: 1px !important;
+    
+    /* 3. Forces the corners to match your existing screen curves */
     border-radius: 12px !important;
-    box-sizing: border-box !important;
-}
-
-/* --- This acts as a physical plastic ring layered on top of the blue graphic --- */
-#display::after {
-    content: "" !important;
-    position: absolute !important;
-    top: -4px !important;
-    left: -4px !important;
-    right: -4px !important;
-    bottom: -4px !important;
     
-    /* 1. Thin, crisp physical light-gray retro plastic border housing */
-    border: 4px solid #cbd5e1 !important; 
-    
-    /* 2. Low-contrast hardware lighting highlights */
-    border-top-color: #f1f5f9 !important;   /* Light source hitting the top edge */
-    border-left-color: #e2e8f0 !important;
-    border-right-color: #94a3b8 !important;  /* Soft, realistic shadow drop lines */
-    border-bottom-color: #94a3b8 !important;
-    
-    /* 3. Old vacuum tube glass curved corner profile matches display box */
-    border-radius: 14px !important;
-    
-    /* 4. Layering parameters ensure the bezel covers the blue graphic background */
-    z-index: 9999 !important; 
-    pointer-events: none !important; /* Keeps choices and links underneath fully clickable */
-    
-    /* 5. Depth shadows to blend cleanly over the map asset backdrop */
+    /* 4. Drops shadow coordinates straight onto your map backdrop */
     box-shadow: 
-        inset 0 0 4px rgba(0, 0, 0, 0.45), /* Dark physical screen transition seam */
-        4px 6px 14px rgba(0, 0, 0, 0.25) !important; /* Outer shadow cast onto background map */
+        inset 0 0 5px rgba(0, 0, 0, 0.45), /* Sharp dark seam where the glass screen ends */
+        4px 6px 14px rgba(0, 0, 0, 0.25) !important; /* Soft physical shadow cast onto the background */
+        
+    box-sizing: border-box !important;
 }

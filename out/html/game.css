@@ -638,15 +638,16 @@ table {
   background: transparent;
 }
 
-/* --- Left Sidebar Window Container --- */
-.retro-window {
+/* --- New Contained Window Box --- */
+.retro-window-box {
     background-color: #d8e2dc !important; /* Cool, industrial metallic frame */
     border: 2px solid #5a6b7c;
     padding: 4px !important;
     box-sizing: border-box !important;
     display: flex;
     flex-direction: column;
-    width: 100% !important; /* Keeps container strictly bound to sidebar limits */
+    width: 100%; 
+    max-width: 100%;
 }
 
 /* --- Window Title Bar --- */
@@ -718,9 +719,9 @@ table {
 .window-controls .win-btn:nth-child(3)::after { transform: rotate(-45deg); }
 
 /* --- Perfect Width Grid-Aligned Tabs --- */
-.tab_container {
+.retro-window-box .tab_container {
     display: flex;
-    flex-wrap: nowrap !important; /* Prevents wrapping entirely */
+    flex-wrap: nowrap !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -728,15 +729,14 @@ table {
     z-index: 2;
 }
 
-/* Tab Button Configuration with Aggressive Box Sizing overrides */
-.tab_button {
-    flex: 1 1 0% !important; /* Forces mathematically perfect 25% splits */
+.retro-window-box .tab_button {
+    flex: 1 1 0% !important; 
     background-color: #cbd5e1;
     border: 1px solid #64748b !important;
-    border-bottom: none !important; /* Merges cleanly downward into content box */
+    border-bottom: none !important; 
     padding: 6px 2px !important;
-    margin: 0 !important; /* Completely eliminates parent element spacer drift */
-    font-size: 12px;
+    margin: 0 !important; 
+    font-size: 11px; /* Slightly scaled down text to fit small sidebars nicely */
     font-family: "Courier New", monospace;
     cursor: pointer;
     text-align: center;
@@ -745,19 +745,18 @@ table {
     box-sizing: border-box !important;
 }
 
-/* Active Highlight Tab Alignment */
-.tab_button.active {
-    background-color: #f4f9f9 !important; /* Perfectly matches screen hex */
+.retro-window-box .tab_button.active {
+    background-color: #f4f9f9 !important; 
     font-weight: bold;
     color: #113f8c;
-    border-bottom: 1px solid #f4f9f9 !important; /* Melts away boundary line */
+    border-bottom: 1px solid #f4f9f9 !important; 
     position: relative;
-    top: 1px; /* Overlaps content boundary for folder tab effect */
+    top: 1px; 
     z-index: 3;
 }
 
 /* --- The TCR Icy White Terminal Screen Area --- */
-#qualities {
+.retro-window-box #qualities {
     background-color: #f4f9f9 !important; /* Premium, clean icy white */
     border: 1px solid #64748b !important;
     padding: 16px !important;
@@ -767,7 +766,7 @@ table {
     font-family: "Courier New", monospace;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box !important; /* Crucial: includes padding inside width math */
+    box-sizing: border-box !important;
     width: 100% !important;
 
     /* Vintage CRT Screen Scan Line Simulation Overlay */
@@ -781,7 +780,6 @@ table {
     animation: crt-flicker 0.15s infinite;
 }
 
-/* --- Hardware Retro Flicker Animation Effect --- */
 @keyframes crt-flicker {
     0% { opacity: 0.995; }
     50% { opacity: 1; }

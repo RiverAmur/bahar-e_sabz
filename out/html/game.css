@@ -789,7 +789,7 @@ table {
 /* --- Fixes the outer green background bleeding --- */
 #stats_sidebar {
     background: none !important; /* Strips out the native game green color block */
-    background-color: transparent !important;
+    background-color: #1e293b !important;
     padding: 0 !important;
     margin: 0 !important;
 }

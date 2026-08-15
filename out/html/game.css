@@ -175,6 +175,8 @@ ul.choices {
   border-radius: 4px;
   clear: left;
   align-content: center;
+  align-items: center;
+  text-align: center;
 }
 ul.choices li {
   border-bottom: 1px solid #876;

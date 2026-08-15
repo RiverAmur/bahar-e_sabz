@@ -593,10 +593,7 @@ What still could be.
 
 
 
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
+- @1928_main: In the Name of God.
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
@@ -633,7 +630,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2009
 
-It is a dark time for Iranian democracy. The hardline forces of fundamentalism attempted to rig the Presidential elections and erode the freedoms of the Iranian people.
+It is a dark time for Iranian democracy. The hardline forces of fundamentalism attempted to rig the Presidential elections and erode the freedoms of the Iranian nation.
 
 However, thanks to the iron mettle of the people, they failed; and now the task of Mir-Hossein Mousavi is to be the voice of the voiceless.
 

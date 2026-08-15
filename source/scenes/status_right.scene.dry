@@ -14,9 +14,7 @@ if (Q.economic_growth) {
 }
 !}
 
-= Status
-
-[+ month : month +] [+ year +]
+= [+ month : month +] [+ year +]
 
 Political Influence: [+ political_influence : political_influence +]
 

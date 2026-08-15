@@ -174,6 +174,7 @@ ul.choices {
   list-style-type: none;
   border-radius: 4px;
   clear: left;
+  align-content: center;
 }
 ul.choices li {
   border-bottom: 1px solid #876;

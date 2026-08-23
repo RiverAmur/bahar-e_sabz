@@ -49,7 +49,7 @@ header, #content, footer {
   overflow: auto;
 }
 #content {
-  background-color: rgba(175, 230, 188, 0.9);
+  background-color: rgba(188, 217, 209, 0.9);
   background-image: linear-gradient(
     rgba(0, 0, 0, 0) 50%, 
     rgba(0, 0, 0, 0.1) 50%
@@ -139,9 +139,8 @@ header h2:before {
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
+  background-color: transparent !important;
   letter-spacing: 0.1em;
-  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
-               rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
 a {
   color: var(--link-color);
@@ -586,7 +585,7 @@ table {
     fill: #8B0000;
 }
 .seat.spd {
-    fill: #2b831e;
+    fill: #E3000F;
     stroke: var(--border-color);
     stroke-width: 1.5px;
 }

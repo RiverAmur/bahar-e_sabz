@@ -29,7 +29,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 = Government
 
-<span style="color: #256c05; font-weight: bold; text-align: center">Supreme Leader</span>: [+ president +]
+<span style="color: #256c05; font-weight: bold; text-align: center">Supreme Leader</span> [+ president +]
 
 President: [+ chancellor +]
 

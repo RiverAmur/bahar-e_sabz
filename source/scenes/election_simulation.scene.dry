@@ -1,10 +1,10 @@
-title: Election Simulation
+title: Historical Background
 set-jump: post_election
 
 
-- @1928: 1928 historical scenario
-- @1930: 1930 historical scenario
-- @1932: 1932 (July) historical scenario
+- @1928: Islamic Republic 1979-2009
+- @1930: 2009 Presidential Election
+- @1932: Aftermath of the Green Movement
 
 @1928
 on-arrival: {!

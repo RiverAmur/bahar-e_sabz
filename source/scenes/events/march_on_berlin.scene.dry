@@ -15,7 +15,7 @@ They demand either immediate elections under the "supervision" of the nationalis
 
 @non_govt_menu
 
-It appears that President [+ supreme_leader +] is looking favorably upon the fascist proposals. Chancellor [+ chancellor +] has announced plans to resign.
+It appears that President [+ president +] is looking favorably upon the fascist proposals. Chancellor [+ chancellor +] has announced plans to resign.
 
 - @fight
 - @accept
@@ -27,7 +27,7 @@ go-to: accept_election if (nsdap_normalized + dnvp_normalized >= 0.5 and far_rig
 @accept_election
 on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; old_middle_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_spd -= 10; workers_kpd -= 10; sa_strength += 100;
 
-President [+ supreme_leader +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
+President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
 
 
 @accept_hitler
@@ -39,7 +39,7 @@ After the resignation of the chancellor, Hitler has been appointed chancellor[? 
 
 @ask_resign
 
-President [+ supreme_leader +] has asked our government to resign.
+President [+ president +] has asked our government to resign.
 
 - @fight
 - @fight_constitution
@@ -95,7 +95,7 @@ title: This is unconstitutional! We will keep our positions in government, and a
 choose-if: judicial_reform >= 3
 unavailable-subtitle: The judiciary would never agree with us.
 
-The courts agree that President [+ supreme_leader +] is wrong to dismiss us, and that we should remain in the government. The President might respect the court's decision for now, but the fascists in the streets do not. They are still demanding snap elections or the resignation of the government, and will remain in the streets until we either meet their demands, or they are forced out.
+The courts agree that President [+ president +] is wrong to dismiss us, and that we should remain in the government. The President might respect the court's decision for now, but the fascists in the streets do not. They are still demanding snap elections or the resignation of the government, and will remain in the streets until we either meet their demands, or they are forced out.
 
 - @new_elections
 - @fight
@@ -115,7 +115,7 @@ go-to: new_elections_braun_2 if nsdap_normalized + dnvp_normalized >= 0.5 and fa
 
 @new_elections_braun_reject
 
-The fascists reject our offer of free and fair elections. They are demanding that President [+ supreme_leader +] dismisses the current government and appoints Hitler chancellor. [? if far_right_coalition >= 50 : They claim that since the far-right coalition has the majority in the Reichstag, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
+The fascists reject our offer of free and fair elections. They are demanding that President [+ president +] dismisses the current government and appoints Hitler chancellor. [? if far_right_coalition >= 50 : They claim that since the far-right coalition has the majority in the Reichstag, they are constitutionally justified in appointing the chanellor. Unfortunately, their argument is not exactly wrong. ?]
 
 - @braun_appoints_hitler
 - @fight
@@ -160,9 +160,9 @@ We have resigned our positions in the government.
 title: We cannot do anything but appoint Hitler chancellor.
 view-if: president == "Braun"
 choose-if: nsdap_normalized >= 0.5 or largest_party == "NSDAP"
-unavailable-subtitle: There is no way President [+ supreme_leader +] could do such a blatantly undemocratic act.
+unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act.
 on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
 
-Threatened with a civil war, and unwilling to fight anymore, President [+ supreme_leader +] dismisses the current government and appoints Hitler of the NSDAP as chancellor.
+Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the NSDAP as chancellor.
 
 - @hitler_takes_power

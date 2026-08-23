@@ -30,7 +30,7 @@ subtitle: This would be pretext for a right-wing coup.
 unavailable-subtitle: [? if president == "Hindenburg" : President Hindenburg would never allow this. ?]
 on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"
 
-With great reluctance, President [+ supreme_leader +] appoints [+ chancellor +] as chancellor.
+With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
 
 Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the KPD, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 

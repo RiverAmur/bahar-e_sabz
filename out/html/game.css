@@ -765,8 +765,8 @@ table {
 
 /* --- The TCR Icy White Terminal Screen Area --- */
 .retro-window-box #qualities {
-    background-color: #f4f9f9 !important; /* Premium, clean icy white */
-    border: 1px solid #64748b !important;
+    background-color: #f4f9f5 !important; /* Premium, clean icy white */
+    border: 1px solid #9fbb90 !important;
     padding: 16px !important;
     margin: 0 !important;
     min-height: 400px;
@@ -779,7 +779,7 @@ table {
 
     /* Vintage CRT Screen Scan Line Simulation Overlay */
     background-image: linear-gradient(
-        rgba(18, 24, 38, 0.03) 50%, 
+        rgba(18, 38, 19, 0.03) 50%, 
         transparent 50%
     );
     background-size: 100% 4px;
@@ -789,9 +789,9 @@ table {
 }
 
 @keyframes crt-flicker {
-    0% { opacity: 0.995; }
+    0% { opacity: 0.955; }
     50% { opacity: 1; }
-    100% { opacity: 0.993; }
+    100% { opacity: 0.973; }
 }
 
 /* --- Fixes the outer green background bleeding --- */

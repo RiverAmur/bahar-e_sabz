@@ -29,7 +29,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 = Government
 
-<span style="color: #256c05; font-weight: bold;"><p style="text-align: center;">Supreme Leader</p></span> <br>[+ president +]</br>
+<p style="text-align: center;"><span style="color: #256c05; font-weight: bold;">Supreme Leader</span></p> <br>[+ president +]</br>
 
 <img src="img/portraits/Khamenei_1.jpg">
 

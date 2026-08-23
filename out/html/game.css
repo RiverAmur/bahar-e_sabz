@@ -49,7 +49,7 @@ header, #content, footer {
   overflow: auto;
 }
 #content {
-  background-color: rgba(211, 220, 234, 0.9);
+  background-color: rgba(211, 217, 240, 0.9);
   background-image: linear-gradient(
     rgba(0, 0, 0, 0) 50%, 
     rgba(0, 0, 0, 0.1) 50%
@@ -60,7 +60,7 @@ header, #content, footer {
     inset 0 0 30px rgba(65, 63, 63, 0.45), 
     0 0 0 2px #cecdd5, 
     0 0 0 8px #747f8d, 
-    0 0 0 10px #4a596f, 
+    0 0 0 10px #3b4657, 
     5px 8px 16px rgba(0, 0, 0, 0.4); 
   /*background-size: 100% 20px;*/
   position: relative;
@@ -81,9 +81,9 @@ header, #content, footer {
   font-weight: normal;
 }
 @keyframes crt-flicker {
-  0%   { opacity: 0.99; }
+  0%   { opacity: 0.9; }
   50%  { opacity: 1.0;  }
-  100% { opacity: 0.98; }
+  100% { opacity: 0.9; }
 }
 footer {
   margin-top: 1em;

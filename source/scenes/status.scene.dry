@@ -24,7 +24,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 = Government
 
-<p style="text-align: center;"><span style="color: #256c05; font-weight: bold;">Supreme Leader</span></p><p style="text-align: center;">of the Islamic Revolution</p> <p style="text-align: center;">[+ president +]</p>
+<p style="text-align: center; padding-bottom: 0;"><span style="color: #256c05; font-weight: bold;">Supreme Leader</span></p><p style="text-align: center; padding-bottom: 0;">of the Islamic Revolution</p> <p style="text-align: center; padding-bottom: 0;">[+ president +]</p>
 
 <img src="img/portraits/Khamenei_1.jpg" style="border-image: url(img/frame.png) 30;">
 

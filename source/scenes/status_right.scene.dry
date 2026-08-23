@@ -31,7 +31,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 <span style="color: #256c05; font-weight: bold;"><p style="text-align: center;">Supreme Leader</p></span> [+ president +]
 
-<img src="img/Khamenei_1.jpg">
+<img src="img/portraits/Khamenei_1.jpg">
 
 President: [+ chancellor +]
 

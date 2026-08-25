@@ -28,11 +28,11 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 <p style="text-align: center; padding-bottom: 0; margin-bottom: 0;"><img src="img/portraits/Khamenei_1.jpg" style="margin-bottom: 0em; height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"></p>
 
-<p style="padding-bottom: 0; margin-bottom: 0;">
+
 <span style="white-space: nowrap;">Health: [+ sl_health : sl_health +]</span>
 <span style="white-space: nowrap;">Opinion: [+ sl_opinion : sl_opinion +]</span>
 <span style="white-space: nowrap;">Influence: [+ sl_influence : sl_influence +]</span>
-</p>
+
 
 <p style="text-align: center; font-weight: bold; padding-bottom: 0; margin-bottom: 0.5em;">President of Iran</p> <p style="text-align: center;">[+ chancellor +]</p>
 
@@ -40,7 +40,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 <p style="text-align: center; padding-bottom: 0; margin-bottom: 0;">[? if chancellor == "Mir-Hossein Mousavi": <img src="img/portraits/Mousavi_1.png" style="margin-bottom: 0; height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]</p>
 
-<p style="text-align: center; padding-bottom: 0; margin-bottom: 0;">
+<p style="text-align: center; padding-bottom: 0; margin-bottom: 0em;">
 <span style="white-space: nowrap;">[+ p_ideology : p_ideology +]</span></p>
 <span style="white-space: nowrap;">Popularity: [+ p_popularity : p_popularity +]</span>
 <span style="white-space: nowrap;">Position: [+ p_position : p_position +]</span>

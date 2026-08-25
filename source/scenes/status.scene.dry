@@ -46,7 +46,22 @@ Movement Unity: [+ dissent_percent : dissent +]
 <span style="white-space: nowrap;">Position: [+ p_position : p_position +]</span>
 
 
-Majles-e Shurâ-ye Eslâmi:
+
+
+# = Economics
+
+# Inflation: [+ inflation_2 +]%
+
+# [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
+
+# GDP Growth: [+ economic_growth_2 +]%
+
+
+
+
+@politics
+
+= Majles-e Shurâ-ye Eslâmi:
 
 {!<span class="tooltip-text" title="Reformist Camp">Reformists</span>!}: [+ spd_r +]%
 # [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
@@ -70,19 +85,6 @@ Majles-e Shurâ-ye Eslâmi:
 Next Legislative Election: [+ next_election_month : month +] [+ next_election_year +]
 # Next Presidential Election: [+ +]
 
-= Economics
-
-Inflation: [+ inflation_2 +]%
-
-[? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
-
-GDP Growth: [+ economic_growth_2 +]%
-
-
-
-# = Public Opinion
-
-@politics
 
 = Inter-party Relations
 

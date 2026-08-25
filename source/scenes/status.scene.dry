@@ -40,11 +40,11 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 [? if chancellor == "Mir-Hossein Mousavi": <img src="img/portraits/Mousavi_1.png" style="margin-bottom: 0; height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
 
-<p style="padding-bottom: 0; margin-bottom: 0;">
-<span style="white-space: nowrap;">[+ p_ideology : p_ideology +]</span>
+<p style="text-align: center; padding-bottom: 0; margin-bottom: 0;">
+<span style="white-space: nowrap;">[+ p_ideology : p_ideology +]</span></p>
 <span style="white-space: nowrap;">Popularity: [+ p_popularity : p_popularity +]</span>
 <span style="white-space: nowrap;">Position: [+ p_position : p_position +]</span>
-</p>
+
 
 Majles-e Shurâ-ye Eslâmi:
 

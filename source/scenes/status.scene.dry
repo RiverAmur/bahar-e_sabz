@@ -34,9 +34,9 @@ Influence: [+ sl_influence : sl_influence +]
 
 <p style="text-align: center;">President</p><p style="text-align: center;">[+ chancellor +]</p>
 
-[? if Q.chancellor == "Mahmoud Ahmadinejad": <img src="img/portraits/Ahmadinejad.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
+[? if chancellor == "Mahmoud Ahmadinejad": <img src="img/portraits/Ahmadinejad.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
 
-[? if Q.chancellor == "Mir-Hossein Mousavi": <img src="img/portraits/Mousavi_1.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
+[? if chancellor == "Mir-Hossein Mousavi": <img src="img/portraits/Mousavi_1.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
 
 Ideology: [+ p_ideology : p_ideology +]
 Popularity: [+ p_popularity : p_popularity +]

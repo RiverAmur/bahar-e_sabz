@@ -34,7 +34,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 <span style="white-space: nowrap;">Influence: [+ sl_influence : sl_influence +]</span>
 </p>
 
-<p style="text-align: center; padding-bottom: 0; margin-bottom: 0.5em;">President</p> <p style="text-align: center;">[+ chancellor +]</p>
+<p style="text-align: center; padding-bottom: 0; margin-bottom: 0.5em;">President of Iran</p> <p style="text-align: center;">[+ chancellor +]</p>
 
 [? if chancellor == "Mahmoud Ahmadinejad": <img src="img/portraits/Ahmadinejad.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
 

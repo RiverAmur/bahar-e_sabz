@@ -331,13 +331,13 @@ Q.economic_records = [];
 // State of the government
 Q.president = "Ayatollah Ali Khamenei";
 //Supreme Leader stats
-Q.sl_health = 10
-Q.sl_opinion = 8
-Q.sl_influence = 10 
+Q.sl_health = 10;
+Q.sl_opinion = 8;
+Q.sl_influence = 10; 
 //President stats
-Q.p_ideology = 0
-Q.p_popularity = 32
-Q.p_position = 4
+Q.p_ideology = 0;
+Q.p_popularity = 32;
+Q.p_position = 4;
 // starting president: Ahmadinejad
 Q.chancellor = "Mahmoud Ahmadinejad";
 Q.chancellor_party = 'Z';

@@ -799,6 +799,7 @@ table {
     background-color: #1e293b !important;
     padding: 0 !important;
     margin: 0 !important;
+    white-space: nowrap !important;
 }
 
 /* --- Optional: Add a clean dark drop shadow to the window frame --- */

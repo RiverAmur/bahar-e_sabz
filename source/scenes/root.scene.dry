@@ -35,6 +35,8 @@ Q.old_demographics = 0;
 // TODO: not yet implemented
 Q.use_decimals = 0;
 
+//Green Movement influence
+Q.influence = 0;
 // party resources
 Q.resources = 4;
 // party dues
@@ -60,6 +62,8 @@ Q.neorevisionist_strength = 5;
 Q.neorevisionist_dissent = 10;
 
 // secret events...
+Q.khamenei_death = 0;
+Q.khamenei_cancer = 0;
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
@@ -291,9 +295,6 @@ Q.catholics_other = 12;
 // Current Reichstag composition
 // % of Majles in Mehr 1388
 // source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
-// since they were ideologically similar, but they were separate parties.
-// They did not have a CDU/CSU-style relationship.
 Q.spd_r = 18;
 Q.kpd_r = 13;
 Q.z_r = 67;
@@ -632,7 +633,7 @@ this.state.disableSaves = true;
 go-to: 1928_main
 
 @1928_main
-audio: shuffle music/2009_2010/mibarim_ma.mp3 music/2009_2010/yare_dabestani.mp3 music/2009_2010/MarekWeber.mp3 music/2009_2010/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/2009_2010/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
+audio: shuffle music/2009_2010/mibarim_ma.mp3 music/2009_2010/yare_dabestani.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 

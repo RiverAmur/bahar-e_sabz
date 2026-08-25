@@ -28,13 +28,24 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 <img src="img/portraits/Khamenei_1.jpg" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;">
 
-President: [+ chancellor +]
+Health: [+ sl_health : sl_health +]
+Opinion: [+ sl_opinion : sl_opinion +]
+Influence: [+ sl_influence : sl_influence +]
+
+<p style="text-align: center;">President</p><p style="text-align: center;">[+ chancellor +]</p>
+
+[? if Q.chancellor == "Mahmoud Ahmadinejad": <img src="img/portraits/Ahmadinejad.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
+
+[? if Q.chancellor == "Mir-Hossein Mousavi": <img src="img/portraits/Mousavi_1.png" style="height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;"> ?]
+
+Ideology: [+ p_ideology : p_ideology +]
+Popularity: [+ p_popularity : p_popularity +]
+Position: [+ p_position : p_position +]
 
 Majles-e Shurâ-ye Eslâmi:
 
-# 1928: 30, 1930: 25, 1932: 22
 {!<span class="tooltip-text" title="Reformist Camp">Reformists</span>!}: [+ spd_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+# [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Principlist Camp">Principlists</span>!}: [+ z_r +]%
 # 1928: 10, 1930: 13
@@ -52,7 +63,8 @@ Majles-e Shurâ-ye Eslâmi:
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
-Next election: [+ next_election_month : month +] [+ next_election_year +]
+Next Legislative Election: [+ next_election_month : month +] [+ next_election_year +]
+# Next Presidential Election: [+ +]
 
 = Economics
 

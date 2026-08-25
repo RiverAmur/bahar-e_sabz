@@ -330,6 +330,14 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Ayatollah Ali Khamenei";
+//Supreme Leader stats
+Q.sl_health = 10
+Q.sl_opinion = 8
+Q.sl_influence = 10 
+//President stats
+Q.p_ideology = 0
+Q.p_popularity = 32
+Q.p_position = 4
 // starting president: Ahmadinejad
 Q.chancellor = "Mahmoud Ahmadinejad";
 Q.chancellor_party = 'Z';
@@ -502,7 +510,7 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
+Q.next_election_year = 2012;
 Q.next_election_month = 5;
 Q.next_election_time = 5;
 // government affairs timers

@@ -1,13 +1,13 @@
 
-(1..1) Bahman
-(2..2) Esfand
-(3..3) Farvardin
-(4..4) Ordibehesht
-(5..5) Khordad
-(6..6) Tir
-(7..7) Mordad
-(8..8) Shahrivar
-(9..9) Mehr
-(10..10) Aban
-(11..11) Azr
-(12..12) Dey
+(1..1) January (Bahman)
+(2..2) February (Esfand)
+(3..3) March (Farvardin)
+(4..4) April (Ordibehesht)
+(5..5) May (Khordad)
+(6..6) June (Tir)
+(7..7) July (Mordad)
+(8..8) August (Shahrivar)
+(9..9) September (Mehr)
+(10..10) October (Aban)
+(11..11) November (Azr)
+(12..12) December (Dey)

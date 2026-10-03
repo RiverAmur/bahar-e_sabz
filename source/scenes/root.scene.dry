@@ -42,24 +42,24 @@ Q.resources = 4;
 // party dues
 Q.dues = 3;
 
-// the state of the party
-// overall dissent reduces every increase in party support.
+// the state of the movement
+// overall dissent reduces every increase in movement support.
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'labor', 'reformist', 'neorevisionist'];
-// should this be normalized to 100%?
-Q.left_strength = 25;
-Q.left_dissent = 10;
-Q.center_strength = 25;
-Q.center_dissent = 10;
-Q.labor_strength = 25;
-Q.labor_dissent = 5;
-Q.reformist_strength = 25;
-Q.reformist_dissent = 5;
-Q.neorevisionist_strength = 5;
-Q.neorevisionist_dissent = 10;
+Q.factions = ['students', 'clerics', 'intellectuals', 'pragmatists', 'edalatists', 'feminists', 'eftekharists', 'Bazaaris', 'deviationists'];
+
+Q.students_strength = 25;
+Q.students_dissent = 10;
+Q.clerics_strength = 25;
+Q.clerics_dissent = 10;
+Q.intellecutals_strength = 25;
+Q.intellectuals_dissent = 5;
+Q.pragmatists_strength = 25;
+Q.pragmatists_dissent = 5;
+Q.edalatists_strength = 5;
+Q.edalatists_dissent = 10;
 
 // secret events...
 Q.khamenei_death = 0;
@@ -69,8 +69,8 @@ Q.centrists_resign = 0;
 Q.left_split = 0;
 Q.reformists_resigned = 0;
 
-// have we discovered neorevisionism?
-Q.neorevisionism = 0;
+// have we established the Damavand Movement?
+Q.damavand = 0;
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
@@ -102,7 +102,59 @@ Q.nationalization_adopted = 0;
 Q.moderate_plan_support = 0;
 Q.moderate_plan_adopted = 0;
 
-// organizations
+// state organizations
+Q.guardian_council_power = 0;
+Q.guardian_council_leaning = 0;
+Q.expediency_council_power = 0;
+Q.expediency_council_leaning = 0;
+Q.assembly_of_experts_power = 0;
+Q.assembly_of_experts_leaning = 0;
+
+// streets
+Q.hijab_support = 0;
+Q.religiousness = 0;
+Q.ershad = 0; 
+Q.drugs = 0; 
+Q.lgtbqia_acceptance = 0; 
+Q.westernisation = 0; 
+
+// Reform Package 
+Q.moharabe_removed = 0; 
+
+// warfare
+Q.abraham_lincoln_sunk = 0; 
+Q.qatar_energy = 0;
+Q.uae_energy = 0; 
+Q.kuwait_energy = 0; 
+Q.desal_plants = 0; 
+
+// Axis of Resistance 
+// Yeme
+Q.yemeni_civil_war_begun = 0; 
+Q.ansar_allah_relations = 0; 
+Q.ansar_allah_power = 0;
+// Lebanon
+Q.hezbollah_relations = 0; 
+Q.hezbollah_power = 0; 
+Q.hezbollah_leader = "Hasan Nasrallah"; 
+// Iraq
+Q.pmf_relations = 0;
+Q.pmf_power = 0; 
+// Azerbaijan
+Q.husseiniyoun_formed = 0;
+Q.husseiniyoun_strength = 0;
+// Arab Peninsula 
+Q.islamic_resistance_in_the_land_of_the_two_holy_mosques_formed = 0;
+Q.islamic_resistance_in_the_land_of_the_two_holy_mosques_strength = 0;
+Q.saraya_al_shatr_formed = 0;
+Q.saraya_al_shatr_strength = 0;
+//Syria
+Q.syrian_civil_war_begun = 0; 
+// General
+Q.liwa_fatemiyoun = 0;
+Q.liwa_zeinabiyoun = 0; 
+
+
 
 // inter-party relations
 Q.z_relation = 50;
@@ -124,14 +176,13 @@ Q.nsdap_leader = "Hitler";
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
 
-
 // Does the SPD lead in Prussia?
 Q.spd_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
 Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
+// Number of members in 2009 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.rb_strength = 2000;
 Q.rb_militancy = 0.01;
@@ -158,7 +209,7 @@ Q.prussian_police_strength = 90;
 Q.prussian_police_militancy = 1;
 Q.prussian_police_loyalty = 0.5;
 
-// strength includes actual military and de facto reserves?
+// armed forces
 Q.reichswehr_strength = 100;
 Q.reichswehr_militancy = 5;
 Q.reichswehr_loyalty = 0.2;
@@ -194,33 +245,26 @@ Q.nsdap_banned = 0;
 Q.coup_progress = 0;
 Q.capital_strike_progress = 0;
 
+// Economy 
 Q.budget = 4;
+// to do: add taxes
+// to do: add industries
+Q.income = 1600;
+Q.inflation = 2.9;
+Q.economic_growth = 4.4;
+Q.economic_expansion = 0;
 
 // Proportion of different social groups
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
-Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
-// source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
-Q.catholics = 30;
-
-// unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
-
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
-Q.income = 1600;
-// what about incomes for different classes? rural workers? middle-class workers?
-
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
-Q.inflation = 2.9;
-
-// economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
-
-// economic expansion timer
-Q.economic_expansion = 0;
+Q.mostazafan = 10;
+Q.workers = 20; 
+Q.urbanites = 20;
+Q.bazaaris = 10; 
+Q.rural = 15; 
+Q.isargaran = 10; 
+Q.youth = 10;
+Q.azeris = 3;
+Q.kurds = 1; 
+Q.balochis = 1; 
 
 // quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
@@ -229,7 +273,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['mostazafan', 'workers', 'urbanites', 'bazaaris', 'rural', 'isargaran', 'youth', 'azeris', 'kurds', 'balochis'];
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on

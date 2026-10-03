@@ -45,9 +45,6 @@ Movement Unity: [+ dissent_percent : dissent +]
 <span style="white-space: nowrap;">Popularity: [+ p_popularity : p_popularity +]</span>
 <span style="white-space: nowrap;">Position: [+ p_position : p_position +]</span>
 
-
-
-
 # = Economics
 
 # Inflation: [+ inflation_2 +]%
@@ -58,10 +55,9 @@ Movement Unity: [+ dissent_percent : dissent +]
 
 
 
-
 @politics
 
-= Majles-e Shurâ-ye Eslâmi:
+= Majles:
 
 {!<span class="tooltip-text" title="Reformist Camp">Reformists</span>!}: [+ spd_r +]%
 # [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]

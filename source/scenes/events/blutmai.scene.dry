@@ -1,27 +1,26 @@
-title: May Day, 1929
+title: The President's Address
 new-page: true
-subtitle: A Communist demonstration
+subtitle: Mir-Hossein Mousavi seeks to set the stage for his ambitious agenda. 
 tags: event
-view-if: year = 1929 and month = 5
+view-if: year = 2009 and month = 5
 max-visits: 1
-face-image: img/redfront.jpg
+face-image: 
 
-= May Day, 1929
+= The President's Address
 
-Tensions run high in Berlin. The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Uprising. No one has forgotten that it was our party members who ordered the uprising's suppression, and the Communists still blame us for the deaths of Rosa Luxemburg and Karl Liebknecht.
+Upon his unprecedented popular victory coupled with the successful supplantation of his intra-regime rivals, Mir-Hossein Mousavi has given his first public address to the jubilant nation to reaffirm his commitment to ‘Eslah’ – reform - the core slogan of his campaign. 
 
-Many non-communists are afraid of the possibility of another violent uprising, and our allies in the Prussian coalition are asking the Prussian Interior Ministry to ban the demonstrations.
+However, though he has managed it thus far, the balancing act facing the reformist president is nothing short of miraculously difficult. Mousavi must seek to bridge the gap between his widely afferent supporters – the reformist clergy, the intelligentsia, the youth and the pragmatic politicians, while simultaneously assuring the reluctant Supreme Leader of his utter loyalty to the Islamic system. 
 
-- @ban: Ban the demonstrations.
-- @allow_police: Allow the demonstrations to proceed, but maintain a heavy police presence.
-- @allow: Allow the demonstrations to proceed.
-- @join: Join in the demonstrations ourselves.
+- @reconciliation: Focus on 'Reconciliation' to bridge the gap between the system and the people; and smooth over the tensions of the election. 
+- @wisdom: Stake the address on the concept of 'Wisdom', emphasising social cohesion while committing to major reform.
+- @agitation: Condemn the state-sanctioned violence of the election season and the election's irregularity, demanding accountability. 
 
-@ban
-on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 5; dvp_relation += 5; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1
+@reconciliation
+on-arrival: kpd_relation -= 25; z_relation += 5; dvp_relation += 5; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3
 face-image: img/blutmai.jpg
 
-We issued the order to ban the demonstrations, and sent police to enforce the ban. There was a confrontation between the police and Communists, and violence erupted. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. The Communists are already calling this incident *Blutmai*, "Bloody May".
+The President strikes a conciliatory tone, most notably calling on street protests to 
 
 This may end any attempt at reconciliation with the KPD, but the Center and People's parties approve of our action.
 
@@ -52,13 +51,13 @@ on-arrival: kpd_relation += 5; workers_kpd += 5; unemployed_kpd += 5
 The demonstration proceeds peacefully under the watchful eyes of the police. Onlookers admire the strength of the Communist workers, and perhaps some of our supporters have been peeled off.
 
 
-@allow
+@wisdom
 on-arrival: workers_kpd += 5; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1
 
 The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and perhaps some of our members have been peeled off. The KPD will never admit it, but they are developing a less hostile view towards us (even if they do not *like* us yet). Our centrist allies denounce the demonstration, but their cries are ineffectual.
 
 
-@join
+@agitation
 choose-if: kpd_relation >= 45
 unavailable-subtitle: The Communists do not trust us enough.
 on-arrival: kpd_relation += 15; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50

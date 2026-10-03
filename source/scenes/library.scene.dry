@@ -5,20 +5,20 @@ go-to: menu
 
 = The Library
 
-Herein contains relevant information about the government and politics of the German republic.
+Herein contains relevant information about the government and politics of the Islamic Republic.
 
 @menu
 
-- @government: Germany's system of government
-- @weimar_timeline: Timeline of the Weimar Republic before 1928
-- @curr_gov: Current government details
+- @government: Iran's System
+- @weimar_timeline: Timeline of Islamic Iran (1979-2009)
+- @curr_gov: Current Government
 - @demographics: Demographics
 - @parties: Parties
-- @public_opinion: Public opinion (and projected election results)
-- @paramilitaries: Paramilitary groups
-- @factions: Internal factions
-- @figures: Figures and charts
-- @backSpecialScene: Exit library.
+- @public_opinion: Public Opinion
+- @paramilitaries: Paramilitary Groups
+- @factions: Internal Factions
+- @figures: Figures and Charts
+- @backSpecialScene: Exit Library.
 
 @government
 go-to: menu

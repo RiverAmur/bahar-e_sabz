@@ -35,13 +35,12 @@ Q.old_demographics = 0;
 // TODO: not yet implemented
 Q.use_decimals = 0;
 
-//Green Movement 
+//Green Movement
 Q.influence = 0;
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
-// factions
-Q.factions = ['students', 'clerics', 'intellectuals', 'pragmatists', 'edalatists', 'feminists', 'eftekharists', 'Bazaaris', 'deviationists'];
+Q.factions = ['students', 'clerics', 'intellectuals', 'pragmatists', 'edalatists', 'feminists', 'eftekharists', 'deviationists'];
 
 Q.students_strength = 25;
 Q.students_dissent = 10;
@@ -53,17 +52,30 @@ Q.pragmatists_strength = 25;
 Q.pragmatists_dissent = 5;
 Q.edalatists_strength = 5;
 Q.edalatists_dissent = 10;
+Q.feminists_strength = 0;
+Q.feminists_dissent = 0; 
+Q.eftekharists_strength = 0; 
+Q.eftekharists_dissent = 0; 
+Q.deviationists_strength = 0;
+Q.deviationists_dissent = 0;
+
+// have we established the Damavand Movement?
+Q.damavand = 0;
 
 // secret events...
-Q.khamenei_death = 0;
-Q.khamenei_cancer = 0;
+
 Q.unions_independent = 0;
 Q.clerics_resign = 0;
 Q.left_split = 0;
 Q.students_resigned = 0;
 
-// have we established the Damavand Movement?
-Q.damavand = 0;
+//KHAMENEI Secret Stats
+Q.khamenei_death = 0;
+Q.khamenei_cancer = 0;
+Q.khamenei_indecision = 5;
+Q.khamenei_successor = 0;
+// 1 = Mojtaba, 2 = Arafi, 3 = ???, 4 = ??? 
+
 
 // crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;

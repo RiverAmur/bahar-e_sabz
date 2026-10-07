@@ -2,8 +2,8 @@ title: Pragmatists Leave the Movement!
 new-page: true 
 subtitle: The Green Movement has grown too radical for their liking.
 tags: event
-view-if: reformist_dissent >= 60
-on-arrival: reformist_strength *= 0.3; workers_spd -= 10; workers_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if severing_advisor == 1; braun_advisor = 0; severing_advisor = 0; rb_strength -= 250; reformists_resign = 1
+view-if: students_dissent >= 60
+on-arrival: students_strength *= 0.3; workers_spd -= 10; workers_others += 5; n_advisors -= 1 if braun_advisor == 1; n_advisors -= 1 if severing_advisor == 1; braun_advisor = 0; severing_advisor = 0; rb_strength -= 250; studentss_resign = 1
 max-visits: 1
 
 = Pragmatists Leave the Movement!

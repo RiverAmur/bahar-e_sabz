@@ -1,20 +1,19 @@
-title: Fritz Baade
+title: Bahare Hedayat
 is-pinned-card: true
-tags: advisor, reformist
-card-image: img/portraits/BaadeFritz.jpg
-view-if: baade_advisor = 1
+tags: advisor, students
+card-image: img/portraits/BahareHedayat.jpg
+view-if: hedayat_advisor = 1
 new-page: true 
 
-= Fritz Baade
+= Bahare Hedayat
 
-Baade is one of the few agricultural experts in the SPD, and an unorthodox economist.
+Bahare Hedayat is a student leader at Tehran University who campaigns for women's rights, being involved in the "One Million Signatures" movement. 
 
-- @agriculture
-- @rural_campaign
-- @depression
+- @women
+- @onemilsig
 - @root: Return to main
 
-@agriculture
+@women
 title: Agricultural Policy
 subtitle: Baade is the Minister of Agriculture.
 choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "SPD"
@@ -23,7 +22,7 @@ on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advis
 go-to: agricultural_policy
 
 
-@rural_campaign
+@onemilsig
 title: Rural Campaign
 subtitle: Try to campaign among the rural populace.
 choose-if: advisor_action_timer == 0 and rural_policy > 0
@@ -32,12 +31,4 @@ on-arrival: advisor_action_timer = 6; rural_spd += 5*(1-dissent); peoples_party_
 
 We have increased our campaigning among farmers and the rural populace.
 
-@depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to rescue us from the economic crisis.
-choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
-on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 1
-
-The WTB-Plan, standing for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Baade canvasses in favor of this plan throughout the party.
 

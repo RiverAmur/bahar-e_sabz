@@ -36,7 +36,7 @@ Which faction should we support?
 - @support_left: Left
 - @support_center: Center
 - @support_labor: Labor
-- @support_reform: Reformists
+- @support_reform: studentss
 - @support_neorev: Neorevisionists
 
 @support_left
@@ -47,7 +47,7 @@ Vorwärts prints editorials in support of Left positions.
 @support_center
 on-arrival: center_dissent -= 8; center_strength += 8
 
-Vorwärts prints editorials in support of centrist positions.
+Vorwärts prints editorials in support of clerics positions.
 
 @support_labor
 on-arrival: labor_dissent -= 8; labor_strength += 8
@@ -55,9 +55,9 @@ on-arrival: labor_dissent -= 8; labor_strength += 8
 Vorwärts prints editorials in support of the policies of the trade unions.
 
 @support_reform
-on-arrival: reformist_dissent -= 8; reformist_strength += 8;
+on-arrival: students_dissent -= 8; students_strength += 8;
 
-Vorwärts prints editorials in support of the reformist policies.
+Vorwärts prints editorials in support of the students policies.
 
 @support_neorev
 view-if: neorevisionism
@@ -70,6 +70,6 @@ title: Cooperation with the KPD
 subtitle: Could we build closer ties with the KPD?
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
+on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); students_dissent += 2
 
 Stampfer works towards closer ties with the KPD through our media.

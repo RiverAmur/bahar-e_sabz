@@ -820,15 +820,24 @@ h1 {
   background-color: rgba(143, 225, 124, 0.3);
 }
 
+/* --- Centering wrapper to fix the off-center panel layout --- */
+.sl-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 12px 0;
+}
+
 .sl_office {
   /* --- Premium Base Typography --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #0d3c26;             /* Institutional Green Text Base */
-  background-color: #f7f5ee;  /* Premium Parchment Base */
+  color: #0d3c26;             
+  background-color: #f7f5ee;  
   
-  /* --- 🟢 THE CRITICAL OVERFLOW FIX: Shrinks button to fit your game panel --- */
+  /* --- Sleek, Proportional Layout --- */
   display: inline-flex;
   flex-direction: column;     
   align-items: center;        
@@ -837,74 +846,65 @@ h1 {
   position: relative;
   user-select: none;
   
-  /* 🟢 Solves Issue 1 & 2: Drops the fixed 230px box and fits the parent container width */
-  width: 90%;                 /* Leaves a clean 5% margin buffer on either side of the panel */
-  max-width: 190px;           /* Caps the maximum expansion so it never bleeds out */
+  /* Responsive sizing that fills the container neatly without bleeding out */
+  width: 90%;                 
+  max-width: 195px;           
   box-sizing: border-box;
-  
-  /* 🟢 Drastically squeezed inner margins to eliminate the wasted empty vertical/horizontal space */
-  padding: 8px 10px 10px 10px; 
+  padding: 12px 16px; 
   
   /* --- Fine-Line Double Borders --- */
   border: 2px double #b89742;  
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  /* Synchronized property color fading curves */
-  transition: background-color 0.2s ease-in-out, 
-              color 0.2s ease-in-out, 
-              border-color 0.2s ease-in-out;
+  /* 🟢 HOVER SYNC: Tells the browser to process color, background, and filters together */
+  transition: all 0.15s ease-in-out;
 }
 
-/* --- Perfectly Symmetrical Emblem Layout --- */
+/* --- Symmetrical Emblem Layout --- */
 .sl_office .emblem-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 16px;               /* Scaled down slightly to match tighter proportions */
+  height: 18px;               
   width: 100%;
-  margin-bottom: 4px;         /* Squeezed gap below image */
+  margin-bottom: 8px;         
 }
 
 .sl_office .sl_emblem {
-  height: 16px;               
+  height: 18px;               
   width: auto;
   display: block;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  transition: filter 0.2s ease-in-out; 
+  transition: all 0.15s ease-in-out; 
 }
 
-/* --- Micro-Typography Controls --- */
-
-/* LINE 1 */
+/* 🟢 LINE 1: Automatically expands character spacing to hit the exact margins */
 .sl_office .line-office {
-  display: block;             
-  font-size: 9.5px;           /* Slid down text size slightly to prevent overflow */
-  letter-spacing: 5px;        /* 🟢 Reduced spacing to pull empty space out of the margins */
-  text-indent: 5px;           /* Corrects rightward bias to center perfectly */
+  display: block;
+  font-size: 11px;            
   width: 100%;
-  text-align: center;
-  margin-bottom: 1px;
+  text-align: justify;
+  text-align-last: justify;   /* Native browser layout logic for edge-to-edge tracking */
 }
 
-/* LINE 2 */
+/* LINE 2: Small, tight, and dead-center */
 .sl_office .line-ofthe {
-  display: block;             
+  display: block;
   font-size: 7.5px;             
-  letter-spacing: 1px;
   opacity: 0.8;               
   width: 100%;
   text-align: center;
-  margin-bottom: 2px;
+  margin: 4px 0;              
 }
 
-/* LINE 3 */
+/* 🟢 LINE 3: Automatically expands line width to frame the bottom perfectly */
 .sl_office .line-leader {
-  display: block;             
-  font-size: 9.5px;            
-  letter-spacing: 0.5px;
+  display: block;
+  font-size: 11px;            
   width: 100%;
-  text-align: center;
+  text-align: justify;
+  text-align-last: justify;   /* Matches line 1 to pull out the horizontal dead space */
 }
 
 /* --- Interactive Hover State --- */
@@ -914,6 +914,7 @@ h1 {
   border-color: #dfbe6b;      
 }
 
+/* Instantly silhouetting the emblem logo to white at the same exact frame */
 .sl_office:hover .sl_emblem {
   filter: brightness(0) invert(1);
 }

@@ -830,81 +830,69 @@ h1 {
 }
 
 .sl_office {
-  /* --- Premium Base Typography --- */
+  /* --- Typography --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
   font-weight: 700;
   text-transform: uppercase;
   color: #0d3c26;             
   background-color: #f7f5ee;  
+  text-align: center;         /* Forces absolute, unbreakable center alignment */
   
-  /* --- Sleek, Proportional Layout --- */
-  display: inline-flex;
-  flex-direction: column;     
-  align-items: center;        
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-  user-select: none;
-  
-  /* Responsive sizing that fills the container neatly without bleeding out */
-  width: 90%;                 
+  /* --- Structural Layout --- */
+  display: block;             
+  margin: 12px auto;          /* 🟢 AUTOMATICALLY CENTERS THE BUTTON IN YOUR PANEL */
+  width: 90%;                 /* Fits your container smoothly */
   max-width: 195px;           
   box-sizing: border-box;
-  padding: 12px 16px; 
+  padding: 12px 10px 14px 10px; /* Perfectly balanced internal space */
+  cursor: pointer;
+  user-select: none;
   
-  /* --- Fine-Line Double Borders --- */
+  /* --- Fine Gold Borders --- */
   border: 2px double #b89742;  
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  /* 🟢 HOVER SYNC: Tells the browser to process color, background, and filters together */
-  transition: all 0.15s ease-in-out;
+  /* 🟢 PERFECT TIMING SYNC: Bundles everything into one snappy curve */
+  transition: all 0.2s ease-in-out;
 }
 
 /* --- Symmetrical Emblem Layout --- */
 .sl_office .emblem-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   height: 18px;               
-  width: 100%;
-  margin-bottom: 8px;         
+  margin: 0 auto 8px auto;    
 }
 
 .sl_office .sl_emblem {
   height: 18px;               
   width: auto;
-  display: block;
+  margin: 0 auto;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  transition: all 0.15s ease-in-out; 
+  
+  /* 🟢 MATCHES THE BUTTON TIMING PRECISELY */
+  transition: all 0.2s ease-in-out; 
 }
 
-/* 🟢 LINE 1: Automatically expands character spacing to hit the exact margins */
+/* --- Line-by-Line Spacing --- */
+
 .sl_office .line-office {
-  display: block;
   font-size: 11px;            
-  width: 100%;
-  text-align: justify;
-  text-align-last: justify;   /* Native browser layout logic for edge-to-edge tracking */
+  letter-spacing: 7px;        /* 🟢 Stretches 'OFFICE' nicely over the stack */
+  text-indent: 7px;           /* 🟢 Crucial: Cancels out the off-center bug caused by letter-spacing */
+  margin-bottom: 3px;
 }
 
-/* LINE 2: Small, tight, and dead-center */
 .sl_office .line-ofthe {
-  display: block;
-  font-size: 7.5px;             
+  font-size: 8px;             
+  letter-spacing: 1px;
   opacity: 0.8;               
-  width: 100%;
-  text-align: center;
-  margin: 4px 0;              
+  margin-bottom: 5px;
 }
 
-/* 🟢 LINE 3: Automatically expands line width to frame the bottom perfectly */
 .sl_office .line-leader {
-  display: block;
   font-size: 11px;            
-  width: 100%;
-  text-align: justify;
-  text-align-last: justify;   /* Matches line 1 to pull out the horizontal dead space */
+  letter-spacing: 0.5px;
 }
 
 /* --- Interactive Hover State --- */
@@ -914,7 +902,7 @@ h1 {
   border-color: #dfbe6b;      
 }
 
-/* Instantly silhouetting the emblem logo to white at the same exact frame */
+/* 🟢 Emblem flips to white at the exact same millisecond */
 .sl_office:hover .sl_emblem {
   filter: brightness(0) invert(1);
 }

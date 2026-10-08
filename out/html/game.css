@@ -821,84 +821,38 @@ h1 {
 }
 
 .sl_office {
-  /* --- Premium Niche Serif Typography --- */
-  /* Option A: 'Cinzel Decorative' for a hyper-stylized, regal look */
-  /* Option B: 'Cormorant Garamond' (italicized) for elegant, sharp state-document lettering */
+  /* --- Typography --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #0d3c26;             /* Deep Islamic/Institutional Green */
-  background-color: #f7f5ee;  /* Premium Cream/Aged Parchment Paper */
-  
-  /* --- Layout & Reset --- */
-  display: inline-block;
-  cursor: pointer;
-  padding: 6px;               /* Space for the outer geometric layout */
-  position: relative;
+  line-height: 1.6;
   text-align: center;
-  user-select: none;
   
-  /* --- The Outer Complex Islamic Border System --- */
-  border: 3px double #b89742; /* Classic Gold Double Outer Frame */
-  outline: 1px solid #0d3c26;  /* Fine green accent framing the entire button */
+  /* --- Base Colors & Structure --- */
+  color: #f7f5ee;             /* Warm cream text color */
+  background-color: #0d3c26;  /* Solid institutional green background */
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  
+  /* --- The Complete Outer Islamic Border --- */
+  padding: 16px 36px;         /* Generous padding for an authoritative feel */
+  border: 4px double #b89742; /* Clean gold double frame lines */
+  outline: 1px solid #0d3c26; /* Crisp dark-green outer border definition */
   outline-offset: -1px;
   
   transition: all 0.2s ease-in-out;
 }
 
-/* --- The Inner Arabesque Arch Border Framing the Text --- */
-.sl_office .btn-inner {
-  display: block;
-  padding: 14px 28px;        /* Slightly increased top/bottom padding for the three lines */
-  border: 1px solid #b89742; 
-  position: relative;
-  background-color: transparent;
-  
-  /* 🟢 THE MAGIC PROPERTIES TO FORCED WRAPPING */
-  white-space: pre-wrap;     /* Tells CSS to honor the line breaks typed in HTML */
-  line-height: 1.4;          /* Adjusts spacing between the three stacked lines */
-}
-
-/* --- Corner Star Accents (Creating the Geometric Medallion Look) --- */
-.sl_office .btn-inner::before,
-.sl_office .btn-inner::after {
-  content: "✦";               /* Elegant star glyph for corners */
-  position: absolute;
-  color: #b89742;
-  font-size: 10px;
-  line-height: 1;
-  background-color: #f7f5ee;  /* Masks the inner border lines */
-  padding: 0 3px;
-}
-
-.sl_office .btn-inner::before {
-  top: -6px;
-  left: -6px;
-}
-
-.sl_office .btn-inner::after {
-  bottom: -6px;
-  right: -6px;
-}
-
-/* --- Interactive States --- */
+/* --- Interactive Hover Effects --- */
 .sl_office:hover {
-  background-color: #114c30;  /* Inverts to green background */
-  color: #f7f5ee;             /* Text flips to cream */
-  border-color: #dfbe6b;      /* Gold brightens slightly */
+  background-color: #114c30;  /* Brightens the green slightly */
+  border-color: #dfbe6b;      /* Brightens the gold framing */
 }
 
-/* Forces the corner mask backgrounds to match the hover flip */
-.sl_office:hover .btn-inner::before,
-.sl_office:hover .btn-inner::after {
-  background-color: #114c30;
-  color: #dfbe6b;
-}
-
+/* --- Click Action --- */
 .sl_office:active {
-  transform: scale(0.97);     /* Flat physical click feedback */
-  opacity: 0.95;
+  transform: scale(0.97);     /* Flat physical downscale click response */
 }
-

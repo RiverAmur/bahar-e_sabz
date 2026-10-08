@@ -35,6 +35,10 @@ Q.old_demographics = 0;
 // TODO: not yet implemented
 Q.use_decimals = 0;
 
+//FANCY STUFF
+Q.never_view = 0
+
+
 //Green Movement
 Q.influence = 0;
 Q.dissent = 0.05;

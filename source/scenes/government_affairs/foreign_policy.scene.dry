@@ -1,49 +1,50 @@
-title: Religious Affairs
+title: Office of the Supreme Leader
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: month_actions += 1; foreign_policy_timer += 8
-view-if: spd_in_government = 1 and foreign_minister_party = "SPD" and  foreign_policy_timer <= 0
+view-if: never_view = 0 
 card-image: img/Religious_Affairs.jpg
 go-to: fp_menu
-#subtitle: International relations and dealing with Versailles.
 
-= Religious Affairs
+= Office of the Supreme Leader
 
-There are a number of religious matters we can attend to.
+<img src="img/portraits/Khamenei_1.jpg" style="margin-bottom: 0em; height: 200px; width: 120px; margin: auto; border: 30px solid transparent; border-image: url(img/frame.png) 44 stretch;">
+
+We may approach the Supreme Leader via his office in an attempt to improve relations, vie for his approval of our policies, seek support on an active crisis, or simply hear his thoughts. 
 
 @fp_menu
 
-- @improve_west
-- @improve_east
-- @improve_soviet
-- @customs_union
+- @improve
+- @approval
+- @communicate
+- @support
 - @negotiate
 - @reduce_reparations
 - @expose
 - @european_union
 - @european_union_2
 - @concordat_negotiate
-- @concordat
-- @support_austria
+- @lgbt
+- @nuclear
 - @support_austria_2
 - @root: Do not enact any policies for now.
 - @easy_discard
 - @cancel_advisor_action
 
-@improve_west
+@improve
 title: Improve our relations with the Western Allies.
 on-arrival: west_relation += 2; reparations_negotiation += 1
 
 The key to peace in Europe is a rapproachment between France and Germany. We are taking steps towards that rapproachment. [? if young_plan_seen == 0 : This is difficult to do when France is occupying a major portion of Germany's territory, but we are working on that part. ?]
 
-@improve_east
+@approval
 title: Improve our relations with our eastern neighbors.
 on-arrival: east_relation += 2;
 
 We also aim to improve relations with our eastern neighbors, Poland and Czechoslovakia, who are righfully terrified of German aggression. Hopefully we can convince them of our peaceful intentions.
 
-@improve_soviet
+@communicate
 title: Improve our relations with the Soviet Union.
 subtitle: We could also broach the question of the KPD...
 
@@ -92,7 +93,7 @@ max-visits: 1
 Of course Stalin and the various leaders of the Comintern know about the Wittorf Affair, but they do not seem to know that we know as well. The Comintern was planning to build a narrative around the affair that absolves Thälmann, but perhaps now they will be less inclined to defend him.
 
 
-@customs_union
+@support
 title: Form a customs union with Austria?
 subtitle: This will likely incur the wrath of France.
 unavailable-subtitle: This is superseded by the European Union.
@@ -154,7 +155,7 @@ The Roman Catholic Church is interested in furthering relations with the German 
 
 [? if family_law : Our liberalized divorce policies make it difficult to build relations with the Vatican. ?] [? if abortion : Our legalization of abortion make it difficult to connect with the Church. ?]
 
-@concordat
+@lgbt
 title: We can sign a Concordat with the Vatican!
 view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
 on-arrival: reichskonkordat = 1; z_relation += 15*(1-dissent); catholics_spd += 8*(1-dissent); catholics_z += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
@@ -162,7 +163,7 @@ achievement: reichskonkordat
 
 We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.
 
-@support_austria
+@nuclear
 title: Diplomatically support Austrian democracy against the Dollfuß dictatorship.
 view-if: austrian_parliament_seen = 1 and austrian_civil_war_seen = 0
 on-arrival: sdapo_strength += 1; left_dissent -= 3; center_dissent -= 3

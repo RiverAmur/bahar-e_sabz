@@ -821,38 +821,79 @@ h1 {
 }
 
 .sl_office {
-  /* --- Typography --- */
+  /* --- Typography & White Base Theme --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  line-height: 1.6;
-  text-align: center;
+  color: #0d3c26;             /* Deep Institutional Green Text */
+  background-color: #f7f5ee;  /* Premium Parchment White Background */
   
-  /* --- Base Colors & Structure --- */
-  color: #f7f5ee;             /* Warm cream text color */
-  background-color: #0d3c26;  /* Solid institutional green background */
-  cursor: pointer;
-  user-select: none;
+  /* --- Structural Layout --- */
   display: inline-block;
+  cursor: pointer;
+  padding: 6px;               /* Space for the layered geometric frames */
+  position: relative;
+  text-align: center;
+  user-select: none;
   
-  /* --- The Complete Outer Islamic Border --- */
-  padding: 16px 36px;         /* Generous padding for an authoritative feel */
-  border: 4px double #b89742; /* Clean gold double frame lines */
-  outline: 1px solid #0d3c26; /* Crisp dark-green outer border definition */
+  /* --- The Outer Frame Layering --- */
+  border: 3px double #b89742; /* Premium Gold Double Frame */
+  outline: 1px solid #0d3c26;  /* Crisp Green Outer Boundary Edge */
   outline-offset: -1px;
   
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-/* --- Interactive Hover Effects --- */
+/* --- The Inner Geometric Path Frame --- */
+.sl_office .btn-inner {
+  display: block;
+  padding: 18px 32px;         /* Generous breathing room for the multi-line stack */
+  line-height: 1.5;
+  border: 1px solid #b89742;  /* The structural gold inner line path */
+  position: relative;
+}
+
+/* --- The Authentic Corner Star Medallions --- */
+.sl_office .btn-inner::before,
+.sl_office .btn-inner::after {
+  content: "✦";               /* Your signature star glyphs */
+  position: absolute;
+  color: #b89742;
+  font-size: 11px;
+  line-height: 1;
+  background-color: #f7f5ee;  /* Matches base background to perfectly mask corners */
+  padding: 0 4px;
+  z-index: 2;
+}
+
+/* Fixed anchoring: Keeps them absolute-locked onto the frame boundaries */
+.sl_office .btn-inner::before {
+  top: -6px;
+  left: -6px;
+}
+
+.sl_office .btn-inner::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+/* --- Interactive Hover Flip --- */
 .sl_office:hover {
-  background-color: #114c30;  /* Brightens the green slightly */
-  border-color: #dfbe6b;      /* Brightens the gold framing */
+  background-color: #0d3c26;  /* Inverts completely to deep green on hover */
+  color: #f7f5ee;             /* Text flips to clean parchment white */
+  border-color: #dfbe6b;      /* Gold framework brightens up */
 }
 
-/* --- Click Action --- */
+/* Dynamically forces the star background masks to match the hover background state */
+.sl_office:hover .btn-inner::before,
+.sl_office:hover .btn-inner::after {
+  background-color: #0d3c26;
+  color: #dfbe6b;
+}
+
+/* Flat tactile press feedback */
 .sl_office:active {
-  transform: scale(0.97);     /* Flat physical downscale click response */
+  transform: scale(0.97);
 }

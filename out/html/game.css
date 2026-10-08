@@ -885,8 +885,8 @@ h1 {
 /* 🟢 STRETCHED & SMALLER LINE 3 */
 .sl_office .line-leader {
   font-size: 10px;            /* Matched sizing with line 1 */
-  letter-spacing: 4px;      /* Gives the foundation line a wider, more majestic base */
-  margin-right: -4px;       /* CRITICAL FIX: Keeps it perfectly dead-center */
+  letter-spacing: 2.5px;      /* Gives the foundation line a wider, more majestic base */
+  margin-right: -2.5px;       /* CRITICAL FIX: Keeps it perfectly dead-center */
 }
 
 /* --- Interactive Hover State --- */

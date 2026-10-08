@@ -820,38 +820,27 @@ h1 {
   background-color: rgba(143, 225, 124, 0.3);
 }
 
-/* --- Centering wrapper to fix the off-center panel layout --- */
-.sl-button-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 12px 0;
-}
-
 .sl_office {
-  /* --- Typography --- */
+  /* --- Typography & Theme --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
-  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   color: #0d3c26;             
   background-color: #f7f5ee;  
   text-align: center;
   
-  /* 🟢 CRUSHED VERTICAL SPACE: Tightened line spacing to shrink button height */
-  line-height: 1.3;           
-  letter-spacing: 1px;        
+  /* 🟢 CRUSHED VERTICAL SPACE: Compressed line height tightly */
+  line-height: 1.25;           
   
   /* --- Structural Layout --- */
   display: block;             
-  margin: 10px auto;          /* Centers button perfectly in your panel container */
+  margin: 10px auto;          /* Centers button perfectly in your panel */
   width: 90%;                 
   max-width: 195px;           
   box-sizing: border-box;
   
-  /* 🟢 CRUSHED VERTICAL SPACE: Squeezed top/bottom padding to make it much less tall */
-  padding: 8px 14px 10px 14px; 
+  /* 🟢 ULTRA LEAN VERTICAL HEIGHT: Squeezed top/bottom padding down to 4px/6px */
+  padding: 4px 14px 6px 14px; 
   cursor: pointer;
   user-select: none;
   
@@ -860,33 +849,44 @@ h1 {
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  /* 🟢 HOVER DISCREPANCY FIXED: Only transition the background color smoothly. 
-     This forces the text color and the image filter to snap instantly together. */
+  /* Perfect animation sync (Background only) */
   transition: background-color 0.15s ease-in-out;
 }
 
 /* --- Emblem Layout --- */
 .sl_office .emblem-container {
   display: block;
-  height: 16px;               /* Slid size down slightly to save space */
-  margin: 0 auto 4px auto;    /* Reduced bottom margin to tighten vertical gap */
+  height: 14px;               /* Slipped down slightly to match the lean look */
+  margin: 0 auto 2px auto;    /* Minimized vertical space under the logo */
 }
 
 .sl_office .sl_emblem {
-  height: 16px;               
+  height: 14px;               
   width: auto;
   margin: 0 auto;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  
-  /* 🟢 NO TRANSITION: Forces it to change instantly alongside the text */
-  transition: none; 
+  transition: none;           /* Instant zero-delay hover color flip */
+}
+
+/* 🟢 STRETCHED & SMALLER LINE 1 */
+.sl_office .line-office {
+  font-size: 10px;            /* Slightly smaller font size */
+  letter-spacing: 5px;        /* Spaced out nicely to fill horizontal real estate */
+  margin-right: -5px;         /* CRITICAL FIX: Pulls text back left by 5px so it stays dead-center */
 }
 
 /* --- Tiny middle row text --- */
 .sl_office .ofthe-text {
-  font-size: 7.5px;
+  font-size: 7px;             /* Shifted down to keep it highly subordinate */
+  letter-spacing: 1px;
   opacity: 0.8;
-  letter-spacing: 0.5px;
+}
+
+/* 🟢 STRETCHED & SMALLER LINE 3 */
+.sl_office .line-leader {
+  font-size: 10px;            /* Matched sizing with line 1 */
+  letter-spacing: 1.5px;      /* Gives the foundation line a wider, more majestic base */
+  margin-right: -1.5px;       /* CRITICAL FIX: Keeps it perfectly dead-center */
 }
 
 /* --- Interactive Hover State --- */
@@ -896,12 +896,12 @@ h1 {
   border-color: #dfbe6b;      
 }
 
-/* 🟢 INSTANT COLOR INVERSION MATCH */
+/* Instant color flip with zero latency */
 .sl_office:hover .sl_emblem {
   filter: brightness(0) invert(1); 
 }
 
-/* Click feedback */
+/* Tactile click bounce feedback */
 .sl_office:active {
   transform: scale(0.98);     
 }

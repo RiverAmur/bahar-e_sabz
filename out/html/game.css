@@ -832,32 +832,35 @@ h1 {
 .sl_office {
   /* --- Typography --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   color: #0d3c26;             
   background-color: #f7f5ee;  
-  text-align: center;         /* Forces absolute, unbreakable center alignment */
+  text-align: center;         /* Unbreakable baseline center */
+  line-height: 1.6;           /* Perfect vertical spacing between the 3 rows */
+  letter-spacing: 1px;        /* Clean, subtle global lettering look */
   
-  /* --- Structural Layout --- */
+  /* --- Structural Centering --- */
   display: block;             
-  margin: 12px auto;          /* 🟢 AUTOMATICALLY CENTERS THE BUTTON IN YOUR PANEL */
-  width: 90%;                 /* Fits your container smoothly */
+  margin: 12px auto;          /* Forces the button to sit dead-center in your panel */
+  width: 90%;                 
   max-width: 195px;           
   box-sizing: border-box;
-  padding: 12px 10px 14px 10px; /* Perfectly balanced internal space */
+  padding: 12px 14px 14px 14px;
   cursor: pointer;
   user-select: none;
   
-  /* --- Fine Gold Borders --- */
+  /* --- Clean Double Border Plaque --- */
   border: 2px double #b89742;  
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  /* 🟢 PERFECT TIMING SYNC: Bundles everything into one snappy curve */
+  /* Snappy, completely unified hover timing */
   transition: all 0.2s ease-in-out;
 }
 
-/* --- Symmetrical Emblem Layout --- */
+/* --- Emblem Layout --- */
 .sl_office .emblem-container {
   display: block;
   height: 18px;               
@@ -869,29 +872,13 @@ h1 {
   width: auto;
   margin: 0 auto;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  
-  /* 🟢 MATCHES THE BUTTON TIMING PRECISELY */
   transition: all 0.2s ease-in-out; 
 }
 
-/* --- Line-by-Line Spacing --- */
-
-.sl_office .line-office {
-  font-size: 11px;            
-  letter-spacing: 7px;        /* 🟢 Stretches 'OFFICE' nicely over the stack */
-  text-indent: 7px;           /* 🟢 Crucial: Cancels out the off-center bug caused by letter-spacing */
-  margin-bottom: 3px;
-}
-
-.sl_office .line-ofthe {
-  font-size: 8px;             
-  letter-spacing: 1px;
-  opacity: 0.8;               
-  margin-bottom: 5px;
-}
-
-.sl_office .line-leader {
-  font-size: 11px;            
+/* --- Scale down "of the" row directly --- */
+.sl_office .ofthe-text {
+  font-size: 8px;
+  opacity: 0.8;
   letter-spacing: 0.5px;
 }
 
@@ -902,9 +889,8 @@ h1 {
   border-color: #dfbe6b;      
 }
 
-/* 🟢 Emblem flips to white at the exact same millisecond */
 .sl_office:hover .sl_emblem {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1); /* Flips logo to white instantly with the text */
 }
 
 .sl_office:active {

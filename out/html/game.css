@@ -828,80 +828,79 @@ h1 {
   color: #0d3c26;             /* Institutional Green Text Base */
   background-color: #f7f5ee;  /* Premium Parchment Base */
   
-  /* --- Sleek, Elongated Proportions --- */
+  /* --- Sleek, Less-Clunky Proportions --- */
   display: inline-flex;
   flex-direction: column;     
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 6px;               /* Clean padding buffer around the inside lines */
+  padding: 6px;               /* Perfectly flush outer margins */
   position: relative;
-  text-align: center;
   user-select: none;
   
-  /* 🟢 REMOVED THE SQUARENESS: Widened naturally to let the typography breathe */
-  width: 240px;               
+  /* 🟢 REMOVED THE SQUARENESS: Widened into an elegant wide plaque footprint */
+  width: 210px;               
   box-sizing: border-box;
   
   /* --- Fine-Line Double Borders --- */
-  border: 2px double #b89742;  /* Slightly thinner gold lines for precision */
+  border: 2px double #b89742;  
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease-in-out;
 }
 
-/* --- Perfectly Symmetrical Emblem Layout --- */
+/* --- Symmetrical Emblem Layout --- */
 .sl_office .emblem-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;               /* Scaled down slightly for better proportions */
+  height: 18px;               /* Slid down text/emblem proportions for better breathing room */
   width: 100%;
-  margin-top: 8px;           
-  margin-bottom: 6px;        /* Symmetrical gap between emblem and text block */
+  margin-top: 10px;           
+  margin-bottom: 8px;        
 }
 
 .sl_office .sl_emblem {
-  height: 20px;               
+  height: 18px;               
   width: auto;
   display: block;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  transition: filter 0.2s ease-in-out;
 }
 
 /* --- Micro-Typography Controls --- */
 .sl_office .btn-inner {
-  display: flex;
-  flex-direction: column;     /* Stacks the three lines vertically */
-  align-items: center;
+  display: block;
   width: 100%;
-  padding-bottom: 8px;        /* Evens out the empty space at the bottom */
+  padding: 0 16px 8px 16px;   /* Symmetrical interior horizontal buffer */
+  box-sizing: border-box;
 }
 
-/* 🟢 LINE 1: Spaced out widely to match the baseline width */
+/* 🟢 THE CRITICAL ALIGNMENT FIX: Dynamic auto-justification fills the space flawlessly without clipping */
 .sl_office .line-office {
-  font-size: 11px;            /* Decently smaller overall font sizes */
-  letter-spacing: 11px;       /* Pushes letters apart symmetrically */
-  text-indent: 11px;          /* Offsets the CSS tracking bug to ensure perfect center alignment */
-  line-height: 1.2;
+  font-size: 10.5px;          /* Decently smaller text */
+  text-align: justify;
+  text-align-last: justify;   /* Tells the browser to distribute all word spaces edge-to-edge */
+  width: 100%;
+  line-height: 1.1;
 }
 
-/* 🟢 LINE 2: Kept small, tight, and elegant in the center */
+/* 🟢 LINE 2: Small and perfectly dead-center */
 .sl_office .line-ofthe {
-  font-size: 8px;             /* Noticeably smaller text element */
-  letter-spacing: 2px;
-  text-indent: 2px;
-  opacity: 0.85;              /* Subtle official document stylistic softening */
-  margin: 4px 0;              /* Perfectly balanced vertical gap */
+  font-size: 8px;             /* Distinctly down-scaled middle text */
+  text-align: center;
+  letter-spacing: 1px;
+  opacity: 0.85;              
+  margin: 5px 0 4px 0;        
 }
 
-/* 🟢 LINE 3: The solid structural foundation of the text stack */
+/* 🟢 LINE 3: Solid text stack anchor point */
 .sl_office .line-leader {
-  font-size: 11px;            
-  letter-spacing: 1.5px;
-  text-indent: 1.5px;
-  line-height: 1.2;
+  font-size: 10.5px;          /* Clean down-scaled sizing matched with Line 1 */
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  width: 100%;
 }
 
 /* --- Interactive Hover State --- */
@@ -911,7 +910,7 @@ h1 {
   border-color: #dfbe6b;      /* Gold framework brightens up */
 }
 
-/* Silhouettes the PNG asset directly to pure white on mouse hover */
+/* Silhouettes the PNG asset directly to pure white on mouse hover actions */
 .sl_office:hover .sl_emblem {
   filter: brightness(0) invert(1);
 }

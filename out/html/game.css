@@ -821,45 +821,79 @@ h1 {
 }
 
 .sl_office {
-  /* --- The Core Windows 2000 Typography & Geometry --- */
-  font-family: "Tahoma", "Segoe UI", -apple-system, sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-align: center;
-  padding: 4px 14px;
-  min-height: 24px;
+  /* --- Premium Niche Serif Typography --- */
+  /* Option A: 'Cinzel Decorative' for a hyper-stylized, regal look */
+  /* Option B: 'Cormorant Garamond' (italicized) for elegant, sharp state-document lettering */
+  font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0d3c26;             /* Deep Islamic/Institutional Green */
+  background-color: #f7f5ee;  /* Premium Cream/Aged Parchment Paper */
   
-  /* --- Officious State Theme (Deep Bureaucratic Green) --- */
-  background-color: #d4d0c8; /* Classic Win2K Gray */
-  color: #0d3c26;            /* Deep Iranian Institutional Green */
-  
-  /* --- The Authentic 2000s Bevel Structure --- */
-  border-top: 1.5px solid #ffffff;
-  border-left: 1.5px solid #ffffff;
-  border-right: 1.5px solid #808080;
-  border-bottom: 1.5px solid #808080;
-  box-shadow: inset -1px -1px 0px #404040, 
-              inset 1px 1px 0px #ffffff;
-  
-  outline: none;
+  /* --- Layout & Reset --- */
+  display: inline-block;
   cursor: pointer;
+  padding: 6px;               /* Space for the outer geometric layout */
+  position: relative;
+  text-align: center;
   user-select: none;
+  
+  /* --- The Outer Complex Islamic Border System --- */
+  border: 3px double #b89742; /* Classic Gold Double Outer Frame */
+  outline: 1px solid #0d3c26;  /* Fine green accent framing the entire button */
+  outline-offset: -1px;
+  
+  transition: all 0.2s ease-in-out;
 }
 
-/* --- Focused State (When navigating with tab/keys) --- */
-.sl_office:focus-visible {
-  outline: 1px dotted #000000;
-  outline-offset: -4px;
+/* --- The Inner Arabesque Arch Border Framing the Text --- */
+.sl_office .btn-inner {
+  display: block;
+  padding: 12px 28px;
+  border: 1px solid #b89742;  /* Inner gold alignment path */
+  position: relative;
+  background-color: transparent;
 }
 
-/* --- Clicked State (Inverts the bevel for depth) --- */
+/* --- Corner Star Accents (Creating the Geometric Medallion Look) --- */
+.sl_office .btn-inner::before,
+.sl_office .btn-inner::after {
+  content: "✦";               /* Elegant star glyph for corners */
+  position: absolute;
+  color: #b89742;
+  font-size: 10px;
+  line-height: 1;
+  background-color: #f7f5ee;  /* Masks the inner border lines */
+  padding: 0 3px;
+}
+
+.sl_office .btn-inner::before {
+  top: -6px;
+  left: -6px;
+}
+
+.sl_office .btn-inner::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+/* --- Interactive States --- */
+.sl_office:hover {
+  background-color: #114c30;  /* Inverts to green background */
+  color: #f7f5ee;             /* Text flips to cream */
+  border-color: #dfbe6b;      /* Gold brightens slightly */
+}
+
+/* Forces the corner mask backgrounds to match the hover flip */
+.sl_office:hover .btn-inner::before,
+.sl_office:hover .btn-inner::after {
+  background-color: #114c30;
+  color: #dfbe6b;
+}
+
 .sl_office:active {
-  padding: 5px 13px 3px 15px; /* Shifts text down-right by 1px */
-  border-top: 1.5px solid #808080;
-  border-left: 1.5px solid #808080;
-  border-right: 1.5px solid #ffffff;
-  border-bottom: 1.5px solid #ffffff;
-  box-shadow: inset -1px -1px 0px #ffffff, 
-              inset 1px 1px 0px #404040;
+  transform: scale(0.97);     /* Flat physical click feedback */
+  opacity: 0.95;
 }

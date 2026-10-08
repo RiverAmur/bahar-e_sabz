@@ -828,16 +828,16 @@ h1 {
   color: #0d3c26;             /* Institutional Green Text Base */
   background-color: #f7f5ee;  /* Premium Parchment Base */
   
-  /* --- Sleek Elongated Proportions --- */
+  /* --- Sleek Wide Profile --- */
   display: inline-flex;
-  flex-direction: column;     /* Stacks emblem and rows vertically */
-  align-items: center;        /* Perfectly centers content down the middle axis */
+  flex-direction: column;     
+  align-items: center;        /* Perfectly centers content down the absolute middle */
   justify-content: center;
   cursor: pointer;
   padding: 14px 20px;         
   position: relative;
   user-select: none;
-  width: 230px;               /* Sleek horizontal profile footprint */
+  width: 230px;               /* Sleek wide look */
   box-sizing: border-box;
   
   /* --- Fine-Line Double Borders --- */
@@ -845,7 +845,7 @@ h1 {
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  /* 🟢 SYNCHRONIZED TIMING MATRIX: Locks color fading with the image filter curve */
+  /* Synchronized property color fading curves */
   transition: background-color 0.2s ease-in-out, 
               color 0.2s ease-in-out, 
               border-color 0.2s ease-in-out;
@@ -858,7 +858,7 @@ h1 {
   justify-content: center;
   height: 20px;               
   width: 100%;
-  margin-bottom: 8px;         /* Consistent vertical buffer below image */
+  margin-bottom: 8px;         
 }
 
 .sl_office .sl_emblem {
@@ -866,26 +866,24 @@ h1 {
   width: auto;
   display: block;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  
-  /* 🟢 SYNCHRONIZED EMBLEM TIMING */
   transition: filter 0.2s ease-in-out; 
 }
 
-/* --- Micro-Typography Controls --- */
-
-/* LINE 1: Spaced out widely to sit beautifully above the stack */
+/* 🟢 LINE 1: Forced to be an isolated block row */
 .sl_office .line-office {
-  font-size: 10px;            /* Decently smaller typography */
-  letter-spacing: 9px;        /* Symmetrically spreads out the characters */
-  text-indent: 9px;           /* Perfectly offsets tracking bias to retain absolute center */
+  display: block;             /* FORCES A NEW LINE: Word cannot share a line with anything else */
+  font-size: 10px;            
+  letter-spacing: 9px;        /* Spreads out the characters */
+  text-indent: 9px;           /* Corrects rightward bias to center perfectly */
   width: 100%;
   text-align: center;
   margin-bottom: 2px;
 }
 
-/* LINE 2: Small, clean, and tight */
+/* 🟢 LINE 2: Forced to be an isolated block row */
 .sl_office .line-ofthe {
-  font-size: 8px;             /* Intentionally small middle text row */
+  display: block;             /* FORCES A NEW LINE: Word cannot share a line with anything else */
+  font-size: 8px;             
   letter-spacing: 1px;
   opacity: 0.8;               
   width: 100%;
@@ -893,9 +891,10 @@ h1 {
   margin-bottom: 4px;
 }
 
-/* LINE 3: Solid text stack anchor point */
+/* 🟢 LINE 3: Forced to be an isolated block row */
 .sl_office .line-leader {
-  font-size: 10px;            /* Clean down-scaled layout width matched with line 1 */
+  display: block;             /* FORCES A NEW LINE: Word cannot share a line with anything else */
+  font-size: 10px;            
   letter-spacing: 0.5px;
   width: 100%;
   text-align: center;
@@ -903,17 +902,15 @@ h1 {
 
 /* --- Interactive Hover State --- */
 .sl_office:hover {
-  background-color: #0d3c26;  /* Inverts completely to deep green on hover */
-  color: #f7f5ee;             /* Text flips to clean parchment white */
-  border-color: #dfbe6b;      /* Gold framework brightens up */
+  background-color: #0d3c26;  
+  color: #f7f5ee;             
+  border-color: #dfbe6b;      
 }
 
-/* Forces the PNG silhouette directly to pure white at the exact same split-second */
 .sl_office:hover .sl_emblem {
   filter: brightness(0) invert(1);
 }
 
-/* Flat tactile press feedback */
 .sl_office:active {
   transform: scale(0.98);     
 }

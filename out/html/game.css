@@ -821,79 +821,102 @@ h1 {
 }
 
 .sl_office {
-  /* --- Typography --- */
+  /* --- Premium Base Typography --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
-  font-size: 11px;            
   font-weight: 700;
-  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #0d3c26;             /* Institutional Green Text Base */
-  background-color: #f7f5ee;  /* Fine Parchment White Base */
+  background-color: #f7f5ee;  /* Premium Parchment Base */
   
-  /* --- Hyper-Compact Proportions --- */
+  /* --- Sleek, Elongated Proportions --- */
   display: inline-flex;
   flex-direction: column;     
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 4px;               /* Removed outer layout padding completely */
+  padding: 6px;               /* Clean padding buffer around the inside lines */
   position: relative;
   text-align: center;
   user-select: none;
-  width: 170px;               /* Locked tight side margins */
+  
+  /* 🟢 REMOVED THE SQUARENESS: Widened naturally to let the typography breathe */
+  width: 240px;               
   box-sizing: border-box;
   
-  /* --- Double Accent Borders --- */
-  border: 2.5px double #b89742; 
+  /* --- Fine-Line Double Borders --- */
+  border: 2px double #b89742;  /* Slightly thinner gold lines for precision */
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- The PNG Logo Alignment Rules --- */
+/* --- Perfectly Symmetrical Emblem Layout --- */
 .sl_office .emblem-container {
-  display: block;
-  margin-top: 10px;           /* Tight spacing from the top border line */
-  margin-bottom: -2px;        /* Forces the text up tight against the logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;               /* Scaled down slightly for better proportions */
+  width: 100%;
+  margin-top: 8px;           
+  margin-bottom: 6px;        /* Symmetrical gap between emblem and text block */
 }
 
 .sl_office .sl_emblem {
-  height: 22px;               /* Compact logo scaling */
+  height: 20px;               
   width: auto;
   display: block;
-  
-  /* --- Optional Base Color Tweak --- */
-  /* If your original Emblem.png is a vibrant color (like red) and you want it to look green 
-     by default to match the text, leave this filter active. If it is already green/black, delete this line: */
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  
   transition: filter 0.2s ease-in-out;
 }
 
-/* --- Crushed Inside Padding (Tighter Row Heights) --- */
+/* --- Micro-Typography Controls --- */
 .sl_office .btn-inner {
-  display: block;
-  padding: 6px 12px 10px 12px; /* Drastically squeezed vertical and horizontal margins */
-  line-height: 1.35;           /* Squashes the gap between multi-line wraps */
+  display: flex;
+  flex-direction: column;     /* Stacks the three lines vertically */
+  align-items: center;
   width: 100%;
-  box-sizing: border-box;
+  padding-bottom: 8px;        /* Evens out the empty space at the bottom */
+}
+
+/* 🟢 LINE 1: Spaced out widely to match the baseline width */
+.sl_office .line-office {
+  font-size: 11px;            /* Decently smaller overall font sizes */
+  letter-spacing: 11px;       /* Pushes letters apart symmetrically */
+  text-indent: 11px;          /* Offsets the CSS tracking bug to ensure perfect center alignment */
+  line-height: 1.2;
+}
+
+/* 🟢 LINE 2: Kept small, tight, and elegant in the center */
+.sl_office .line-ofthe {
+  font-size: 8px;             /* Noticeably smaller text element */
+  letter-spacing: 2px;
+  text-indent: 2px;
+  opacity: 0.85;              /* Subtle official document stylistic softening */
+  margin: 4px 0;              /* Perfectly balanced vertical gap */
+}
+
+/* 🟢 LINE 3: The solid structural foundation of the text stack */
+.sl_office .line-leader {
+  font-size: 11px;            
+  letter-spacing: 1.5px;
+  text-indent: 1.5px;
+  line-height: 1.2;
 }
 
 /* --- Interactive Hover State --- */
 .sl_office:hover {
-  background-color: #0d3c26;  /* Flips background to Deep Green */
-  color: #f7f5ee;             /* Flips text to Parchment White */
-  border-color: #dfbe6b;      
+  background-color: #0d3c26;  /* Inverts completely to deep green on hover */
+  color: #f7f5ee;             /* Text flips to clean parchment white */
+  border-color: #dfbe6b;      /* Gold framework brightens up */
 }
 
-/* 🟢 FORCE PNG TO GO PURE WHITE ON HOVER */
+/* Silhouettes the PNG asset directly to pure white on mouse hover */
 .sl_office:hover .sl_emblem {
-  /* This kills all source colors and fully illuminates the image pixels to pure white */
   filter: brightness(0) invert(1);
 }
 
-/* Flat tactile frame click bounce */
+/* Flat tactile press feedback */
 .sl_office:active {
   transform: scale(0.98);     
 }

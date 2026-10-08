@@ -870,21 +870,21 @@ h1 {
 
 /* 🟢 STRETCHED & SMALLER LINE 1 */
 .sl_office .line-office {
-  font-size: 10px;            /* Slightly smaller font size */
+  font-size: 8px;            /* Slightly smaller font size */
   letter-spacing: 10px;        /* Spaced out nicely to fill horizontal real estate */
   margin-right: -10px;         /* CRITICAL FIX: Pulls text back left by 5px so it stays dead-center */
 }
 
 /* --- Tiny middle row text --- */
 .sl_office .ofthe-text {
-  font-size: 7px;             /* Shifted down to keep it highly subordinate */
+  font-size: 4px;             /* Shifted down to keep it highly subordinate */
   letter-spacing: 1px;
   opacity: 0.8;
 }
 
 /* 🟢 STRETCHED & SMALLER LINE 3 */
 .sl_office .line-leader {
-  font-size: 10px;            /* Matched sizing with line 1 */
+  font-size: 8px;            /* Matched sizing with line 1 */
   letter-spacing: 2.5px;      /* Gives the foundation line a wider, more majestic base */
   margin-right: -2.5px;       /* CRITICAL FIX: Keeps it perfectly dead-center */
 }

@@ -828,17 +828,22 @@ h1 {
   color: #0d3c26;             /* Institutional Green Text Base */
   background-color: #f7f5ee;  /* Premium Parchment Base */
   
-  /* --- Sleek Wide Profile --- */
+  /* --- 🟢 THE CRITICAL OVERFLOW FIX: Shrinks button to fit your game panel --- */
   display: inline-flex;
   flex-direction: column;     
-  align-items: center;        /* Perfectly centers content down the absolute middle */
+  align-items: center;        
   justify-content: center;
   cursor: pointer;
-  padding: 14px 20px;         
   position: relative;
   user-select: none;
-  width: 230px;               /* Sleek wide look */
+  
+  /* 🟢 Solves Issue 1 & 2: Drops the fixed 230px box and fits the parent container width */
+  width: 90%;                 /* Leaves a clean 5% margin buffer on either side of the panel */
+  max-width: 190px;           /* Caps the maximum expansion so it never bleeds out */
   box-sizing: border-box;
+  
+  /* 🟢 Drastically squeezed inner margins to eliminate the wasted empty vertical/horizontal space */
+  padding: 8px 10px 10px 10px; 
   
   /* --- Fine-Line Double Borders --- */
   border: 2px double #b89742;  
@@ -856,45 +861,47 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 20px;               
+  height: 16px;               /* Scaled down slightly to match tighter proportions */
   width: 100%;
-  margin-bottom: 8px;         
+  margin-bottom: 4px;         /* Squeezed gap below image */
 }
 
 .sl_office .sl_emblem {
-  height: 20px;               
+  height: 16px;               
   width: auto;
   display: block;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
   transition: filter 0.2s ease-in-out; 
 }
 
-/* 🟢 LINE 1: Forced to be an isolated block row */
+/* --- Micro-Typography Controls --- */
+
+/* LINE 1 */
 .sl_office .line-office {
-  display: block;             /* FORCES A NEW LINE: Word cannot share a line with anything else */
-  font-size: 10px;            
-  letter-spacing: 9px;        /* Spreads out the characters */
-  text-indent: 9px;           /* Corrects rightward bias to center perfectly */
+  display: block;             
+  font-size: 9.5px;           /* Slid down text size slightly to prevent overflow */
+  letter-spacing: 5px;        /* 🟢 Reduced spacing to pull empty space out of the margins */
+  text-indent: 5px;           /* Corrects rightward bias to center perfectly */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+/* LINE 2 */
+.sl_office .line-ofthe {
+  display: block;             
+  font-size: 7.5px;             
+  letter-spacing: 1px;
+  opacity: 0.8;               
   width: 100%;
   text-align: center;
   margin-bottom: 2px;
 }
 
-/* 🟢 LINE 2: Forced to be an isolated block row */
-.sl_office .line-ofthe {
-  display: block;             /* FORCES A NEW LINE: Word cannot share a line with anything else */
-  font-size: 8px;             
-  letter-spacing: 1px;
-  opacity: 0.8;               
-  width: 100%;
-  text-align: center;
-  margin-bottom: 4px;
-}
-
-/* 🟢 LINE 3: Forced to be an isolated block row */
+/* LINE 3 */
 .sl_office .line-leader {
-  display: block;             /* FORCES A NEW LINE: Word cannot share a line with anything else */
-  font-size: 10px;            
+  display: block;             
+  font-size: 9.5px;            
   letter-spacing: 0.5px;
   width: 100%;
   text-align: center;

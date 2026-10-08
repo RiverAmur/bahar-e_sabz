@@ -33,7 +33,9 @@ Movement Unity: [+ dissent_percent : dissent +]
 <span style="white-space: nowrap;">Opinion: [+ sl_opinion : sl_opinion +]</span>
 <span style="white-space: nowrap;">Influence: [+ sl_influence : sl_influence +]</span>
 
-<button class="sl_office" onclick="window.dendryUI.dendryEngine.goToScene('foreign_policy')">Office of the Supreme Leader</button>
+<button class="sl_office" onclick="window.dendryUI.dendryEngine.goToScene('foreign_policy')"><span class="btn-inner">Office 
+of the 
+Supreme Leader</span></button>
 
 <p style="text-align: center; font-weight: bold; padding-bottom: 0; margin-bottom: 0.5em;">President of Iran</p> <p style="text-align: center;">[+ chancellor +]</p>
 

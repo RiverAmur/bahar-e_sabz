@@ -851,10 +851,14 @@ h1 {
 /* --- The Inner Arabesque Arch Border Framing the Text --- */
 .sl_office .btn-inner {
   display: block;
-  padding: 12px 28px;
-  border: 1px solid #b89742;  /* Inner gold alignment path */
+  padding: 14px 28px;        /* Slightly increased top/bottom padding for the three lines */
+  border: 1px solid #b89742; 
   position: relative;
   background-color: transparent;
+  
+  /* 🟢 THE MAGIC PROPERTIES TO FORCED WRAPPING */
+  white-space: pre-wrap;     /* Tells CSS to honor the line breaks typed in HTML */
+  line-height: 1.4;          /* Adjusts spacing between the three stacked lines */
 }
 
 /* --- Corner Star Accents (Creating the Geometric Medallion Look) --- */
@@ -897,3 +901,4 @@ h1 {
   transform: scale(0.97);     /* Flat physical click feedback */
   opacity: 0.95;
 }
+

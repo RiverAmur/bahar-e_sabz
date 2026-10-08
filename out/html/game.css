@@ -819,3 +819,47 @@ table {
 h1 {
   background-color: rgba(143, 225, 124, 0.3);
 }
+
+.sl_office {
+  /* --- The Core Windows 2000 Typography & Geometry --- */
+  font-family: "Tahoma", "Segoe UI", -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 4px 14px;
+  min-height: 24px;
+  
+  /* --- Officious State Theme (Deep Bureaucratic Green) --- */
+  background-color: #d4d0c8; /* Classic Win2K Gray */
+  color: #0d3c26;            /* Deep Iranian Institutional Green */
+  
+  /* --- The Authentic 2000s Bevel Structure --- */
+  border-top: 1.5px solid #ffffff;
+  border-left: 1.5px solid #ffffff;
+  border-right: 1.5px solid #808080;
+  border-bottom: 1.5px solid #808080;
+  box-shadow: inset -1px -1px 0px #404040, 
+              inset 1px 1px 0px #ffffff;
+  
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* --- Focused State (When navigating with tab/keys) --- */
+.sl_office:focus-visible {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+/* --- Clicked State (Inverts the bevel for depth) --- */
+.sl_office:active {
+  padding: 5px 13px 3px 15px; /* Shifts text down-right by 1px */
+  border-top: 1.5px solid #808080;
+  border-left: 1.5px solid #808080;
+  border-right: 1.5px solid #ffffff;
+  border-bottom: 1.5px solid #ffffff;
+  box-shadow: inset -1px -1px 0px #ffffff, 
+              inset 1px 1px 0px #404040;
+}

@@ -834,13 +834,13 @@ h1 {
   
   /* --- Structural Layout --- */
   display: block;             
-  margin: 10px auto;          /* Centers button perfectly in your panel */
+  margin: 8px auto;          /* Centers button perfectly in your panel */
   width: 90%;                 
   max-width: 195px;           
   box-sizing: border-box;
   
   /* 🟢 ULTRA LEAN VERTICAL HEIGHT: Squeezed top/bottom padding down to 4px/6px */
-  padding: 4px 14px 6px 14px; 
+  padding: 2px 14px 4px 14px; 
   cursor: pointer;
   user-select: none;
   
@@ -856,12 +856,12 @@ h1 {
 /* --- Emblem Layout --- */
 .sl_office .emblem-container {
   display: block;
-  height: 14px;               /* Slipped down slightly to match the lean look */
+  height: 12px;               /* Slipped down slightly to match the lean look */
   margin: 0 auto 2px auto;    /* Minimized vertical space under the logo */
 }
 
 .sl_office .sl_emblem {
-  height: 14px;               
+  height: 12px;               
   width: auto;
   margin: 0 auto;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
@@ -877,7 +877,7 @@ h1 {
 
 /* --- Tiny middle row text --- */
 .sl_office .ofthe-text {
-  font-size: 4px;             /* Shifted down to keep it highly subordinate */
+  font-size: 6px;             /* Shifted down to keep it highly subordinate */
   letter-spacing: 1px;
   opacity: 0.8;
 }

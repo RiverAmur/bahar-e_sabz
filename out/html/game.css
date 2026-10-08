@@ -825,19 +825,19 @@ h1 {
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #0d3c26;             /* Deep Institutional Green */
+  color: #0d3c26;             /* Institutional Green Text Base */
   background-color: #f7f5ee;  /* Premium Parchment Base */
   
-  /* --- Sleek Wide Plaque Proportions --- */
+  /* --- Sleek Elongated Proportions --- */
   display: inline-flex;
-  flex-direction: column;     /* Strictly stacks logo and lines vertically */
-  align-items: center;        /* Forces a perfect center alignment line down the middle */
+  flex-direction: column;     /* Stacks emblem and rows vertically */
+  align-items: center;        /* Perfectly centers content down the middle axis */
   justify-content: center;
   cursor: pointer;
-  padding: 14px 20px;         /* Uniform structural breathing room */
+  padding: 14px 20px;         
   position: relative;
   user-select: none;
-  width: 230px;               /* Sleek wide look */
+  width: 230px;               /* Sleek horizontal profile footprint */
   box-sizing: border-box;
   
   /* --- Fine-Line Double Borders --- */
@@ -845,7 +845,10 @@ h1 {
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  transition: all 0.2s ease-in-out;
+  /* 🟢 SYNCHRONIZED TIMING MATRIX: Locks color fading with the image filter curve */
+  transition: background-color 0.2s ease-in-out, 
+              color 0.2s ease-in-out, 
+              border-color 0.2s ease-in-out;
 }
 
 /* --- Perfectly Symmetrical Emblem Layout --- */
@@ -855,7 +858,7 @@ h1 {
   justify-content: center;
   height: 20px;               
   width: 100%;
-  margin-bottom: 8px;         /* Consistent gap between emblem and text */
+  margin-bottom: 8px;         /* Consistent vertical buffer below image */
 }
 
 .sl_office .sl_emblem {
@@ -863,21 +866,26 @@ h1 {
   width: auto;
   display: block;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
+  
+  /* 🟢 SYNCHRONIZED EMBLEM TIMING */
+  transition: filter 0.2s ease-in-out; 
 }
 
-/* 🟢 LINE 1: Spaced out widely to sit beautifully above the stack */
+/* --- Micro-Typography Controls --- */
+
+/* LINE 1: Spaced out widely to sit beautifully above the stack */
 .sl_office .line-office {
-  font-size: 10px;            /* Decently smaller font */
-  letter-spacing: 9px;        /* Spreads out the characters */
-  text-indent: 9px;           /* Shifts the text left slightly to perfectly fix the centering bug */
+  font-size: 10px;            /* Decently smaller typography */
+  letter-spacing: 9px;        /* Symmetrically spreads out the characters */
+  text-indent: 9px;           /* Perfectly offsets tracking bias to retain absolute center */
   width: 100%;
   text-align: center;
   margin-bottom: 2px;
 }
 
-/* 🟢 LINE 2: Small, clean, and tight */
+/* LINE 2: Small, clean, and tight */
 .sl_office .line-ofthe {
-  font-size: 8px;             /* Noticeably smaller text */
+  font-size: 8px;             /* Intentionally small middle text row */
   letter-spacing: 1px;
   opacity: 0.8;               
   width: 100%;
@@ -885,9 +893,9 @@ h1 {
   margin-bottom: 4px;
 }
 
-/* 🟢 LINE 3: Wide base line anchor */
+/* LINE 3: Solid text stack anchor point */
 .sl_office .line-leader {
-  font-size: 10px;            /* Sized cleanly down to match line 1 */
+  font-size: 10px;            /* Clean down-scaled layout width matched with line 1 */
   letter-spacing: 0.5px;
   width: 100%;
   text-align: center;
@@ -900,7 +908,7 @@ h1 {
   border-color: #dfbe6b;      /* Gold framework brightens up */
 }
 
-/* Changes the color of the PNG logo to white on hover */
+/* Forces the PNG silhouette directly to pure white at the exact same split-second */
 .sl_office:hover .sl_emblem {
   filter: brightness(0) invert(1);
 }

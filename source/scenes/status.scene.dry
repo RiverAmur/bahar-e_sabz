@@ -33,6 +33,7 @@ Movement Unity: [+ dissent_percent : dissent +]
 <span style="white-space: nowrap;">Opinion: [+ sl_opinion : sl_opinion +]</span>
 <span style="white-space: nowrap;">Influence: [+ sl_influence : sl_influence +]</span>
 
+<button class="sl_office" onclick="window.dendryUI.dendryEngine.goToScene('foreign_policy')">Office of the Supreme Leader</button>
 
 <p style="text-align: center; font-weight: bold; padding-bottom: 0; margin-bottom: 0.5em;">President of Iran</p> <p style="text-align: center;">[+ chancellor +]</p>
 
@@ -52,7 +53,6 @@ Movement Unity: [+ dissent_percent : dissent +]
 # [? if black_thursday_seen = 1 : Unemployment: [+ unemployed_2 +]% ?]
 
 # GDP Growth: [+ economic_growth_2 +]%
-
 
 
 @politics
@@ -82,20 +82,6 @@ Next Legislative Election: [+ next_election_month : month +] [+ next_election_ye
 # Next Presidential Election: [+ +]
 
 
-= Inter-party Relations
-
-
-{!<span class="tooltip-text" title="French Sorelian-Syndicalist Party">Z</span>!}: [+ z_relation : relationships +]
-
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
-
-{!<span class="tooltip-text" title="United Reform Front">DVP</span>!}: [+ dvp_relation : relationships +]
-
-{!<span class="tooltip-text" title="Internationalist-Revolutionary Party">KPD</span>!}: [+ kpd_relation : relationships +]
-
-{!<span class="tooltip-text" title="Restoration!">DNVP</span>!}: [+ dnvp_relation : relationships +]
-
-{!<span class="tooltip-text" title="Popular Resistance Front">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
 = Internal Factions of the SPD
 
@@ -108,6 +94,22 @@ Next Legislative Election: [+ next_election_month : month +] [+ next_election_ye
 {!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Pragmatists</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+
+
+# = Inter-party Relations
+
+
+#{!<span class="tooltip-text" title="French Sorelian-Syndicalist Party">Z</span>!}: [+ z_relation : relationships +]
+
+#{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+
+#{!<span class="tooltip-text" title="United Reform Front">DVP</span>!}: [+ dvp_relation : relationships +]
+
+#{!<span class="tooltip-text" title="Internationalist-Revolutionary Party">KPD</span>!}: [+ kpd_relation : relationships +]
+
+#{!<span class="tooltip-text" title="Restoration!">DNVP</span>!}: [+ dnvp_relation : relationships +]
+
+#{!<span class="tooltip-text" title="Popular Resistance Front">NSDAP</span>!}: [+ nsdap_relation : relationships +]
 
 
 @paramilitaries

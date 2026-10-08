@@ -53,9 +53,10 @@ is-deck: true
 - #party_affairs
 
 @govt
-title: Government
+title: Presidential Office
 view-if: time >= 6
 card-image: img/Government.jpg
 is-deck: true
 
 - #govt_affairs
+

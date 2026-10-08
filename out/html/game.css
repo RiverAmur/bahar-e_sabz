@@ -821,79 +821,71 @@ h1 {
 }
 
 .sl_office {
-  /* --- Typography & White Base Theme --- */
+  /* --- Typography --- */
   font-family: "Cinzel Decorative", "Cormorant Garamond", "Playfair Display", serif;
-  font-size: 13px;
+  font-size: 11px;            /* Visually compressed font scale factor */
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #0d3c26;             /* Deep Institutional Green Text */
-  background-color: #f7f5ee;  /* Premium Parchment White Background */
+  color: #0d3c26;             /* Institutional Green Text Base */
+  background-color: #f7f5ee;  /* Fine Parchment White Base */
   
-  /* --- Structural Layout --- */
-  display: inline-block;
+  /* --- Flat Geometry & Minimal Footprint --- */
+  display: inline-flex;
+  flex-direction: column;     /* Stacks emblem stacked linearly over text blocks */
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 6px;               /* Space for the layered geometric frames */
+  padding: 4px;               /* Drops structural layout overhead down to minimum */
   position: relative;
   text-align: center;
   user-select: none;
+  width: 170px;               /* Strictly locks down side boundaries */
+  box-sizing: border-box;
   
-  /* --- The Outer Frame Layering --- */
-  border: 3px double #b89742; /* Premium Gold Double Frame */
-  outline: 1px solid #0d3c26;  /* Crisp Green Outer Boundary Edge */
+  /* --- The Double Accent Borders --- */
+  border: 2.5px double #b89742; 
+  outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  transition: all 0.25s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-/* --- The Inner Geometric Path Frame --- */
+/* --- The Logo Scaling & Dynamic Color Filters --- */
+.sl_office .emblem-container {
+  display: block;
+  margin-top: 8px;            /* Pinpoints padding to top edge boundary rules */
+  margin-bottom: -2px;        /* Forces text line spacing up tight against asset footprint */
+}
+
+.sl_office .sl_emblem {
+  height: 20px;               /* Ultra compact height setting */
+  width: auto;
+  /* Re-maps default graphics to match your exact theme green color */
+  filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
+}
+
+/* --- Text Alignment Core --- */
 .sl_office .btn-inner {
   display: block;
-  padding: 18px 32px;         /* Generous breathing room for the multi-line stack */
-  line-height: 1.5;
-  border: 1px solid #b89742;  /* The structural gold inner line path */
-  position: relative;
+  padding: 8px 12px 10px 12px; /* Tight side bounds, crushed vertical space */
+  line-height: 1.3;           /* Squashes the gap between multi-line wraps */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* --- The Authentic Corner Star Medallions --- */
-.sl_office .btn-inner::before,
-.sl_office .btn-inner::after {
-  content: "✦";               /* Your signature star glyphs */
-  position: absolute;
-  color: #b89742;
-  font-size: 11px;
-  line-height: 1;
-  background-color: #f7f5ee;  /* Matches base background to perfectly mask corners */
-  padding: 0 4px;
-  z-index: 2;
-}
-
-/* Fixed anchoring: Keeps them absolute-locked onto the frame boundaries */
-.sl_office .btn-inner::before {
-  top: -6px;
-  left: -6px;
-}
-
-.sl_office .btn-inner::after {
-  bottom: -6px;
-  right: -6px;
-}
-
-/* --- Interactive Hover Flip --- */
+/* --- Interactive Hover Transformations --- */
 .sl_office:hover {
-  background-color: #0d3c26;  /* Inverts completely to deep green on hover */
-  color: #f7f5ee;             /* Text flips to clean parchment white */
-  border-color: #dfbe6b;      /* Gold framework brightens up */
+  background-color: #0d3c26;  
+  color: #f7f5ee;             
+  border-color: #dfbe6b;      
 }
 
-/* Dynamically forces the star background masks to match the hover background state */
-.sl_office:hover .btn-inner::before,
-.sl_office:hover .btn-inner::after {
-  background-color: #0d3c26;
-  color: #dfbe6b;
+/* Switches logo fill asset properties to match contrast changes on mouse hover actions */
+.sl_office:hover .sl_emblem {
+  filter: invert(99%) sepia(5%) saturate(347%) hue-rotate(354deg) brightness(112%) contrast(93%);
 }
 
-/* Flat tactile press feedback */
 .sl_office:active {
-  transform: scale(0.97);
+  transform: scale(0.98);     /* Flat tactile frame click bounce */
 }

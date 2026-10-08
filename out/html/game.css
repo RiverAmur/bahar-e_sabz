@@ -837,47 +837,54 @@ h1 {
   text-transform: uppercase;
   color: #0d3c26;             
   background-color: #f7f5ee;  
-  text-align: center;         /* Unbreakable baseline center */
-  line-height: 1.6;           /* Perfect vertical spacing between the 3 rows */
-  letter-spacing: 1px;        /* Clean, subtle global lettering look */
+  text-align: center;
   
-  /* --- Structural Centering --- */
+  /* 🟢 CRUSHED VERTICAL SPACE: Tightened line spacing to shrink button height */
+  line-height: 1.3;           
+  letter-spacing: 1px;        
+  
+  /* --- Structural Layout --- */
   display: block;             
-  margin: 12px auto;          /* Forces the button to sit dead-center in your panel */
+  margin: 10px auto;          /* Centers button perfectly in your panel container */
   width: 90%;                 
   max-width: 195px;           
   box-sizing: border-box;
-  padding: 12px 14px 14px 14px;
+  
+  /* 🟢 CRUSHED VERTICAL SPACE: Squeezed top/bottom padding to make it much less tall */
+  padding: 8px 14px 10px 14px; 
   cursor: pointer;
   user-select: none;
   
-  /* --- Clean Double Border Plaque --- */
+  /* --- Fine Gold Borders --- */
   border: 2px double #b89742;  
   outline: 1px solid #0d3c26;
   outline-offset: -1px;
   
-  /* Snappy, completely unified hover timing */
-  transition: all 0.2s ease-in-out;
+  /* 🟢 HOVER DISCREPANCY FIXED: Only transition the background color smoothly. 
+     This forces the text color and the image filter to snap instantly together. */
+  transition: background-color 0.15s ease-in-out;
 }
 
 /* --- Emblem Layout --- */
 .sl_office .emblem-container {
   display: block;
-  height: 18px;               
-  margin: 0 auto 8px auto;    
+  height: 16px;               /* Slid size down slightly to save space */
+  margin: 0 auto 4px auto;    /* Reduced bottom margin to tighten vertical gap */
 }
 
 .sl_office .sl_emblem {
-  height: 18px;               
+  height: 16px;               
   width: auto;
   margin: 0 auto;
   filter: invert(17%) sepia(26%) saturate(2206%) hue-rotate(113deg) brightness(91%) contrast(96%);
-  transition: all 0.2s ease-in-out; 
+  
+  /* 🟢 NO TRANSITION: Forces it to change instantly alongside the text */
+  transition: none; 
 }
 
-/* --- Scale down "of the" row directly --- */
+/* --- Tiny middle row text --- */
 .sl_office .ofthe-text {
-  font-size: 8px;
+  font-size: 7.5px;
   opacity: 0.8;
   letter-spacing: 0.5px;
 }
@@ -889,10 +896,12 @@ h1 {
   border-color: #dfbe6b;      
 }
 
+/* 🟢 INSTANT COLOR INVERSION MATCH */
 .sl_office:hover .sl_emblem {
-  filter: brightness(0) invert(1); /* Flips logo to white instantly with the text */
+  filter: brightness(0) invert(1); 
 }
 
+/* Click feedback */
 .sl_office:active {
   transform: scale(0.98);     
 }

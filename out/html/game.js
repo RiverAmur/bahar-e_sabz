@@ -254,3 +254,22 @@
   };
 
 }());
+
+function updateTvDisplay(gifUrl, newsText, channelLabel = "CH-01", alertLabel = "BREAKING NEWS") {
+    // Swap out the center GIF
+    const gifElement = document.getElementById('tv-gif-target');
+    gifElement.src = gifUrl;
+
+    // Swap out the ticker text
+    const textElement = document.getElementById('ticker-text-target');
+    textElement.innerText = newsText;
+
+    // Optional metadata switches
+    document.getElementById('tv-watermark').innerText = channelLabel;
+    document.getElementById('ticker-label').innerText = alertLabel;
+
+    // Reset the marquee animation smoothly to prevent layout glitching on change
+    textElement.style.animation = 'none';
+    textElement.offsetHeight; /* trigger browser layout reflow */
+    textElement.style.animation = null;
+}

@@ -36,11 +36,21 @@ Q.old_demographics = 0;
 Q.use_decimals = 0;
 
 //FANCY STUFF
-Q.never_view = 0
+Q.never_view = 1
 
+//Opening Rubicon
+Q.mousavi_radicalism = 0 
+Q.rafsanjani_success = 0 
+Q.rezaee_support = 0 
+Q.larijani_support = 0
+Q.ahmadinejad_arrogance = 0 
+Q.khamenei_resolve = 0 
+Q.general_strike = 0  
 
 //Green Movement
 Q.influence = 0;
+Q.organisation = 0;
+Q.radicalism = 0; //range from -3 to +3, -3 being most radical and +3 most docile
 Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
@@ -686,6 +696,30 @@ new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2009
+
+<div class="retro-tv-container">
+    <div class="tv-bezel">
+        <div class="tv-screen">
+            <div class="scanlines"></div>
+            
+            <!-- Top Right Channel Watermark -->
+            <div id="tv-watermark" class="irib-logo-badge">CH-01</div>
+
+            <!-- Central Content Media Frame (Insert your GIFs here) -->
+            <img id="tv-gif-target" class="video-canvas" src="path_to_default.gif" alt="TV Broadcast">
+
+            <!-- News Ticker Band -->
+            <div class="news-ticker-band">
+                <div class="ticker-header" id="ticker-label">BREAKING NEWS</div>
+                <div class="ticker-marquee">
+                    <div class="ticker-text" id="ticker-text-target">
+                        Waiting for next game update...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 It is a dark time for Iranian democracy. The hardline forces of fundamentalism attempted to rig the Presidential elections and erode the freedoms of the Iranian nation.
 

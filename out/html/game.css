@@ -905,3 +905,159 @@ h1 {
 .sl_office:active {
   transform: scale(0.98);     
 }
+
+/* ==========================================================================
+   RETRO 2000s TV COMPONENT STYLES
+   ========================================================================== */
+
+/* 2000s Heavy Matte-Plastic Silver/Grey TV Outer Frame */
+.retro-tv-container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto; /* Centers the TV frame horizontally inside the text container */
+    background: linear-gradient(135deg, #a6a6a6 0%, #7a7a7a 50%, #595959 100%);
+    border: 10px solid #3a3a3a;
+    border-radius: 35px;
+    box-shadow: inset 0 5px 15px rgba(255,255,255,0.4), 
+                0 15px 30px rgba(0,0,0,0.6);
+    padding: 15px 15px 35px 15px; /* Deep bottom padding to accommodate vintage aesthetic */
+    box-sizing: border-box;
+}
+
+/* The Curved Inner Bezel of a CRT Display */
+.tv-bezel {
+    background-color: #111;
+    padding: 12px;
+    border-radius: 25px;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,1), 
+                0 2px 3px rgba(255,255,255,0.2);
+    border: 4px solid #4a4a4a;
+}
+
+/* The Screen: Optimized height for text-heavy content containers */
+.tv-screen {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    background-color: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Glass Bulb Illusion Overlay (Shiny Reflex of CRT) */
+.tv-screen::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 15%, rgba(0,0,0,0) 50%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* 2000s Analog Scanline Effect Overlay */
+.scanlines {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 255, 0, 0.03));
+    background-size: 100% 4px, 6px 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* Dynamic Media Box (Where GIFs inject) */
+.video-canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Top Right Channel/Time Watermark Badge */
+.irib-logo-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 60, 120, 0.75);
+    color: #ffffff;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: 3;
+    letter-spacing: 0.5px;
+}
+
+/* News Ticker Band at the Bottom (English LTR standard) */
+.news-ticker-band {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(180deg, #1e3c72 0%, #122546 100%);
+    border-top: 3px solid #ffcc00; /* Distinct bright yellow separator of the era */
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Crimson "Breaking News" Static Box */
+.ticker-header {
+    background: linear-gradient(180deg, #d31010 0%, #8a0606 100%);
+    color: #ffffff;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    border-right: 2px solid #ffcc00;
+    white-space: nowrap;
+    z-index: 6;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Scrolling Marquee Container */
+.ticker-marquee {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    direction: ltr;
+}
+
+/* Smooth marquee movement flowing leftwards for English text */
+.ticker-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    padding-left: 100%; /* Text enters cleanly from the right side */
+    animation: marquee 16s linear infinite;
+    text-shadow: 1px 1px 1px #000;
+}
+
+@keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}

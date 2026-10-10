@@ -697,27 +697,27 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2009
 
-<!-- High-Fidelity Asset-Based TV UI -->
+<!-- Mini Asset-Based Retro Television Component -->
 <div class="pixel-tv-viewport">
     
-    <!-- 1. The Dynamic Video Content Area (Sits Behind the Frame) -->
+    <!-- Dynamic Inside Display Pane (Masked inside your TV screen window area) -->
     <div class="tv-internal-display">
-        <!-- Your Dynamic GIF -->
-        <img id="tv-gif-target" class="tv-gif-layer" src="path_to_default.gif" alt="Broadcast Grid">
+        <!-- Live Variable Action Canvas (Target for dynamic code changes) -->
+        <img id="tv-gif-target" class="tv-gif-layer" src="img/default_broadcast_static.gif" alt="TV Viewscreen">
         
-        <!-- English News Ticker Band -->
+        <!-- Integrated Running Media News Strip -->
         <div class="news-ticker-band">
             <div class="ticker-header" id="ticker-label">BREAKING NEWS</div>
             <div class="ticker-marquee">
-                <div class="ticker-text" id="ticker-text-target">Waiting for live signal connection...</div>
+                <div class="ticker-text" id="ticker-text-target">Awaiting next historical update signal...</div>
             </div>
         </div>
     </div>
 
-    <!-- 2. The PNG TV Bezel Overlay Asset (With a transparent cut-out screen) -->
-    <img src="img/TV.png" class="tv-hardware-frame-asset" alt="Sony CRT Bezel">
+    <!-- Hardware Asset Frame Shell (Overlays exactly over display window) -->
+    <img src="img/TV.png" class="tv-hardware-frame-asset" alt="CRT Plastic Chassis Outer Bezel">
 
-    <!-- 3. Screen FX Filters (Sits on top of everything for authentic tube glare) -->
+    <!-- Tube Optics Layer Simulation -->
     <div class="crt-glass-glare-overlay"></div>
     <div class="scanlines-overlay"></div>
 </div>

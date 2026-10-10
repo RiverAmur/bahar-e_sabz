@@ -907,39 +907,38 @@ h1 {
 }
 
 /* ==========================================================================
-   ASSET-BASED REALISTIC SONY CRT TV COMPONENT
+   MINI PRODUCTION CRT TV STYLES - STABLE RUNTIME RELEASE
    ========================================================================== */
 
-/* Main Viewport Window */
+/* Main Viewport Window Base Wrapper Frame */
 .pixel-tv-viewport {
     position: relative;
     width: 100%;
-    max-width: 540px; /* Adjust to match your container's width */
-    margin: 20px auto;
-    aspect-ratio: 4 / 3; /* Keeps standard 2000s monitor aspect ratio proportions */
+    max-width: 280px; /* Locked down frame parameters to maintain small profile */
+    margin: 14px auto;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
 }
 
-/* 1. TV Hardware Image Layer (Forces container sizing) */
+/* Base Level Chassis Overlay Graphic Engine Structure */
 .tv-hardware-frame-asset {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 3; /* Sits on top of content, framing it with its transparent cutout */
-    pointer-events: none; /* Allows user clicks to pass through if needed */
+    z-index: 3; 
+    pointer-events: none;
 }
 
-/* 2. Dynamic Content Screen Window (Positioned inside the bezel cutout) */
+/* Dynamic Live Media Screen Window Dimensions (Tightly locked inside the thick bezels) */
 .tv-internal-display {
     position: absolute;
-    /* Adjust these values % based on where your asset's screen window sits */
-    top: 8%; 
-    left: 10%;
-    width: 80%;
-    height: 72%;
-    background-color: #05070a;
+    top: 13.5%; 
+    left: 17%;
+    width: 66.5%;
+    height: 57.5%;
+    background-color: #030406;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -947,7 +946,7 @@ h1 {
     overflow: hidden;
 }
 
-/* The Live Event GIF */
+/* Variable Action Media Image Processor Layer */
 .tv-gif-layer {
     width: 100%;
     height: 100%;
@@ -958,40 +957,42 @@ h1 {
     z-index: 1;
 }
 
-/* 3. Screen Glass Effects Layers (Sits above hardware for natural glare) */
+/* Blended Glass Reflections Lens Effect */
 .crt-glass-glare-overlay {
     position: absolute;
-    top: 8%; left: 10%; width: 80%; height: 72%;
-    background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.35) 100%);
+    top: 13.5%; left: 17%; width: 66.5%; height: 57.5%;
+    background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.07) 0%, rgba(0, 0, 0, 0.35) 100%);
     z-index: 4;
     pointer-events: none;
 }
 
+/* Mini Pixel Density Scanline Matrix Filter */
 .scanlines-overlay {
     position: absolute;
-    top: 8%; left: 10%; width: 80%; height: 72%;
-    background: linear-gradient(rgba(18, 16, 16, 0) 60%, rgba(0, 0, 0, 0.15) 60%);
-    background-size: 100% 3px;
+    top: 13.5%; left: 17%; width: 66.5%; height: 57.5%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 65%, rgba(0, 0, 0, 0.16) 65%);
+    background-size: 100% 2px;
     z-index: 5;
     pointer-events: none;
 }
 
-/* 4. Integrated Broadcast Bottom News Ticker Track */
+/* Ticker Strip Structural Foundation Base Container */
 .news-ticker-band {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 38px;
+    height: 22px; 
     background: linear-gradient(180deg, #0b1a30 0%, #050d1a 100%);
-    border-top: 2px solid #e1b400;
+    border-top: 1px solid #e1b400;
     display: flex;
     align-items: center;
-    z-index: 2; /* Renders above the base GIF layer */
+    z-index: 2; 
     box-sizing: border-box;
     overflow: hidden;
 }
 
+/* High-Contrast Alert Callout Badge Block */
 .ticker-header {
     background: linear-gradient(180deg, #c61111 0%, #820505 100%);
     color: #ffffff;
@@ -999,17 +1000,18 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 12px;
-    font-size: 11px;
-    font-family: Arial, sans-serif;
+    padding: 0 6px;
+    font-size: 8px; 
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-    border-right: 2px solid #e1b400;
+    border-right: 1px solid #e1b400;
     white-space: nowrap;
     z-index: 6;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
 }
 
+/* Marquee Scrolling Text Pathway Segment Wrapper */
 .ticker-marquee {
     flex-grow: 1;
     overflow: hidden;
@@ -1019,17 +1021,18 @@ h1 {
     direction: ltr;
 }
 
+/* Smooth Linear Left-Translating Headline Marquee Engine */
 .ticker-text {
     display: inline-block;
     white-space: nowrap;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 9px; 
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;
     padding-left: 100%;
-    line-height: 38px;
-    animation: marquee 16s linear infinite;
-    text-shadow: 1px 1px 2px #000;
+    line-height: 22px;
+    animation: marquee 14s linear infinite;
+    text-shadow: 1px 1px 1px #000;
 }
 
 @keyframes marquee {

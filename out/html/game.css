@@ -907,82 +907,48 @@ h1 {
 }
 
 /* ==========================================================================
-   UPDATED RETRO HIGH-FIDELITY CRT TV COMPONENT
+   ASSET-BASED REALISTIC SONY CRT TV COMPONENT
    ========================================================================== */
 
-/* 2000s Deep Metallic Plastic Outer Bezel */
-.retro-tv-container {
-    position: relative;
-    width: 95%;
-    max-width: 520px;
-    margin: 25px auto;
-    background: #5a5d64;
-    /* Multilayer gradients to create physical hardware depth and rounded edges */
-    background: linear-gradient(135deg, #7c808a 0%, #51545c 40%, #383a3f 100%);
-    border: 3px solid #2d2f34;
-    border-radius: 40px;
-    box-shadow: 
-        inset 0 4px 6px rgba(255, 255, 255, 0.3),
-        inset 0 -4px 10px rgba(0, 0, 0, 0.6),
-        0 12px 28px rgba(0, 0, 0, 0.5);
-    padding: 18px 18px 24px 18px;
-    box-sizing: border-box;
-}
-
-/* Molded Rubber Screen Gasket Ring */
-.tv-bezel {
-    background: #1c1d22;
-    padding: 10px;
-    border-radius: 28px;
-    box-shadow: 
-        inset 0 8px 16px rgba(0, 0, 0, 0.8),
-        0 2px 2px rgba(255, 255, 255, 0.15);
-    border: 1px solid #111215;
-}
-
-/* Rounded CRT Glass Screen Bulb Layer */
-.tv-screen {
+/* Main Viewport Window */
+.pixel-tv-viewport {
     position: relative;
     width: 100%;
-    height: 310px; 
-    background-color: #0b0d10;
-    border-radius: 20px;
+    max-width: 540px; /* Adjust to match your container's width */
+    margin: 20px auto;
+    aspect-ratio: 4 / 3; /* Keeps standard 2000s monitor aspect ratio proportions */
     overflow: hidden;
-    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.95);
+}
+
+/* 1. TV Hardware Image Layer (Forces container sizing) */
+.tv-hardware-frame-asset {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3; /* Sits on top of content, framing it with its transparent cutout */
+    pointer-events: none; /* Allows user clicks to pass through if needed */
+}
+
+/* 2. Dynamic Content Screen Window (Positioned inside the bezel cutout) */
+.tv-internal-display {
+    position: absolute;
+    /* Adjust these values % based on where your asset's screen window sits */
+    top: 8%; 
+    left: 10%;
+    width: 80%;
+    height: 72%;
+    background-color: #05070a;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid #000;
+    overflow: hidden;
 }
 
-/* Convex Glass Bulb Lens Curve Glow Overlay */
-.tv-screen::after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    /* Soft corner radial gloss reflection common on old bulky monitors */
-    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.02) 60%, rgba(0, 0, 0, 0.2) 100%);
-    pointer-events: none;
-    z-index: 5;
-}
-
-/* Subtler Phosphor Aperture Grille (Scanlines) */
-.scanlines {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    /* Reduced vertical line density and increased transparency to fix the harsh grid look */
-    background: linear-gradient(
-        rgba(255, 255, 255, 0) 70%, 
-        rgba(0, 0, 0, 0.18) 70%
-    );
-    background-size: 100% 3px;
-    z-index: 4;
-    pointer-events: none;
-}
-
-/* Dynamic GIF Layer */
-.video-canvas {
+/* The Live Event GIF */
+.tv-gif-layer {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -992,41 +958,40 @@ h1 {
     z-index: 1;
 }
 
-/* Translucent OS Digital Channel Watermark Badge */
-.irib-logo-badge {
+/* 3. Screen Glass Effects Layers (Sits above hardware for natural glare) */
+.crt-glass-glare-overlay {
     position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(14, 28, 54, 0.75);
-    color: #4df3ff; /* Retro sci-fi aqua digital font color */
-    padding: 5px 12px;
-    font-size: 11px;
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 1px solid rgba(77, 243, 255, 0.3);
-    box-shadow: 0 0 8px rgba(77, 243, 255, 0.2);
-    z-index: 3;
-    text-shadow: 0 0 3px rgba(77, 243, 255, 0.5);
+    top: 8%; left: 10%; width: 80%; height: 72%;
+    background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 4;
+    pointer-events: none;
 }
 
-/* Authentic Broadcast Bottom News Ticker Track */
+.scanlines-overlay {
+    position: absolute;
+    top: 8%; left: 10%; width: 80%; height: 72%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 60%, rgba(0, 0, 0, 0.15) 60%);
+    background-size: 100% 3px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* 4. Integrated Broadcast Bottom News Ticker Track */
 .news-ticker-band {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 48px;
+    height: 38px;
     background: linear-gradient(180deg, #0b1a30 0%, #050d1a 100%);
     border-top: 2px solid #e1b400;
     display: flex;
     align-items: center;
-    z-index: 3;
+    z-index: 2; /* Renders above the base GIF layer */
     box-sizing: border-box;
     overflow: hidden;
 }
 
-/* High-contrast Red Alert Block with Beveling */
 .ticker-header {
     background: linear-gradient(180deg, #c61111 0%, #820505 100%);
     color: #ffffff;
@@ -1034,20 +999,17 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px;
+    padding: 0 12px;
     font-size: 11px;
     font-family: Arial, sans-serif;
     font-weight: 900;
-    letter-spacing: 0.5px;
     border-right: 2px solid #e1b400;
     white-space: nowrap;
     z-index: 6;
     text-transform: uppercase;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8);
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* Scrolling Text Track Runway */
 .ticker-marquee {
     flex-grow: 1;
     overflow: hidden;
@@ -1057,18 +1019,16 @@ h1 {
     direction: ltr;
 }
 
-/* Fixed Padding and Vertically Centered Sans-Serif Broadcast Text */
 .ticker-text {
     display: inline-block;
     white-space: nowrap;
     color: #ffffff;
-    font-size: 14px;
-    /* Switched from monospace to standard bold system sans-serif for broadcast realism */
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: bold;
     padding-left: 100%;
-    line-height: 48px; /* Perfectly matches height of parent band to stop clipping */
-    animation: marquee 18s linear infinite;
+    line-height: 38px;
+    animation: marquee 16s linear infinite;
     text-shadow: 1px 1px 2px #000;
 }
 

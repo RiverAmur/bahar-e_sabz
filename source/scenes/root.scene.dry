@@ -697,28 +697,29 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 2009
 
-<div class="retro-tv-container">
-    <div class="tv-bezel">
-        <div class="tv-screen">
-            <div class="scanlines"></div>
-            
-            <!-- Top Right Channel Watermark -->
-            <div id="tv-watermark" class="irib-logo-badge">CH-01</div>
-
-            <!-- Central Content Media Frame (Insert your GIFs here) -->
-            <img id="tv-gif-target" class="video-canvas" src="path_to_default.gif" alt="TV Broadcast">
-
-            <!-- News Ticker Band -->
-            <div class="news-ticker-band">
-                <div class="ticker-header" id="ticker-label">BREAKING NEWS</div>
-                <div class="ticker-marquee">
-                    <div class="ticker-text" id="ticker-text-target">
-                        Waiting for next game update...
-                    </div>
-                </div>
+<!-- High-Fidelity Asset-Based TV UI -->
+<div class="pixel-tv-viewport">
+    
+    <!-- 1. The Dynamic Video Content Area (Sits Behind the Frame) -->
+    <div class="tv-internal-display">
+        <!-- Your Dynamic GIF -->
+        <img id="tv-gif-target" class="tv-gif-layer" src="path_to_default.gif" alt="Broadcast Grid">
+        
+        <!-- English News Ticker Band -->
+        <div class="news-ticker-band">
+            <div class="ticker-header" id="ticker-label">BREAKING NEWS</div>
+            <div class="ticker-marquee">
+                <div class="ticker-text" id="ticker-text-target">Waiting for live signal connection...</div>
             </div>
         </div>
     </div>
+
+    <!-- 2. The PNG TV Bezel Overlay Asset (With a transparent cut-out screen) -->
+    <img src="img/TV.jpg" class="tv-hardware-frame-asset" alt="Sony CRT Bezel">
+
+    <!-- 3. Screen FX Filters (Sits on top of everything for authentic tube glare) -->
+    <div class="crt-glass-glare-overlay"></div>
+    <div class="scanlines-overlay"></div>
 </div>
 
 It is a dark time for Iranian democracy. The hardline forces of fundamentalism attempted to rig the Presidential elections and erode the freedoms of the Iranian nation.

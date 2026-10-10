@@ -715,7 +715,7 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
     </div>
 
     <!-- 2. The PNG TV Bezel Overlay Asset (With a transparent cut-out screen) -->
-    <img src="img/TV.jpg" class="tv-hardware-frame-asset" alt="Sony CRT Bezel">
+    <img src="img/TV.png" class="tv-hardware-frame-asset" alt="Sony CRT Bezel">
 
     <!-- 3. Screen FX Filters (Sits on top of everything for authentic tube glare) -->
     <div class="crt-glass-glare-overlay"></div>
